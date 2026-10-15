@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Resultados Económicos – City Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1020; --panel:#0f1830; --panel-2:#121d3a; --line:#1b2a4f;
+    --txt:#e8edf8; --muted:#7d8bb0; --accent:#f2731a;
+    --pos:#22c55e; --neg:#ef4444;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-padding-top:12px}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  header{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;
+    padding:22px 32px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+  .sub{margin:4px 0 0;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .filters{display:flex;flex-wrap:wrap;gap:10px}
+  .f{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);
+    border-radius:8px;padding:8px 12px;font-size:13px}
+  .f label{color:var(--muted);font-size:12px}
+  .f select{background:transparent;border:0;font-weight:600;cursor:pointer;padding:2px 4px}
+  .f select option{background:var(--panel);color:var(--txt)}
+  .f .fixed{font-weight:600}
+
+  nav{display:flex;gap:4px;padding:14px 32px 0;border-bottom:1px solid var(--line);overflow-x:auto}
+  nav button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 16px;cursor:pointer;
+    color:var(--muted);font-weight:500;font-size:14px;white-space:nowrap}
+  nav button:hover{color:var(--txt)}
+  nav button[aria-selected="true"]{color:var(--txt);border-bottom-color:var(--accent);font-weight:600}
+
+  main{padding:24px 32px 40px}
+  .avisos{display:grid;gap:8px;margin-bottom:18px}
+  .aviso{border:1px solid #6b3a12;background:#24160a;color:#f5c89b;border-radius:8px;padding:10px 14px;font-size:13px}
+
+  .grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:18px;overflow-x:auto;padding-bottom:8px}
+  .col{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--accent);
+    border-radius:10px;display:flex;flex-direction:column;min-width:0}
+  .col-h{padding:16px 16px 14px;text-align:center;border-bottom:1px solid var(--line)}
+  .col-h h2{margin:0;font-size:17px;font-weight:700;color:var(--accent)}
+  .col-h p{margin:4px 0 0;font-size:11px;color:var(--muted);min-height:14px}
+  .blk{padding:18px 16px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;flex:1}
+  .blk:last-child{border-bottom:0}
+  .lbl{text-align:center;font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  .num{text-align:center;font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1.1}
+  .num small{font-size:.62em;font-weight:700}
+  .num.pos{color:var(--pos)} .num.neg{color:var(--neg)}
+  .det{display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-family:var(--mono);font-size:12px;margin-top:4px}
+  .det .k{color:var(--muted);font-weight:700}
+  .det .v{text-align:right;font-weight:700}
+  .v.pos{color:var(--pos)} .v.neg{color:var(--neg)} .v.nd{color:#41507a}
+  .chip{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:11px;
+    background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:5px 9px;color:var(--muted)}
+  .chip b{color:var(--txt)}
+  .final{text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .final b{font-size:13px}
+
+  .estado{padding:60px 20px;text-align:center;color:var(--muted)}
+  .estado strong{display:block;color:var(--txt);font-size:16px;margin-bottom:6px}
+  footer{padding:0 32px 32px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+
+  nav .sep{width:1px;background:var(--line);margin:8px 10px;flex:none}
+  .toolbar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .toolbar label{color:var(--muted);font-size:12px}
+  .toolbar select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-weight:600;font-size:13px;cursor:pointer;max-width:100%}
+  .toolbar select option{background:var(--panel);color:var(--txt)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:18px;min-width:0}
+  .panel h3{margin:0 0 10px;font-size:14px;font-weight:600}
+  .nota{margin:0 0 12px;font-size:12px;color:var(--muted);max-width:80ch;line-height:1.5}
+  .vacio{color:var(--muted);font-size:13px}
+  .charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:0}
+  @media (max-width:900px){.charts{grid-template-columns:minmax(0,1fr)}}
+  .charts .panel{margin-bottom:18px}
+  .charts2{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:18px}
+  .ley{display:flex;gap:14px;font-size:11.5px;color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+  .ley i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+  svg{width:100%;height:auto;display:block}
+  svg text{fill:#7d8bb0;font-family:var(--mono);font-size:10.5px}
+  .scroll{overflow-x:auto}
+  .tbl{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px}
+  .tbl th,.tbl td{padding:7px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+  .tbl th{color:var(--muted);font-weight:600;font-size:11px;background:var(--panel)}
+  .tbl th:first-child,.tbl td:first-child{text-align:left;position:sticky;left:0;background:var(--panel);z-index:1}
+  .tbl td.tt{font-weight:700}
+  .tbl tr.g td{font-weight:700;background:var(--panel-2)}
+  .tbl tr.g td:first-child{background:var(--panel-2)}
+  .tbl tr.tot td{font-weight:700;background:var(--panel-2)}
+  .tbl tr.sub td{color:var(--muted)}
+  .tbl td.cat{font-family:var(--sans);font-size:13px}
+  .tbl td.cat2{font-family:var(--sans);font-size:12px;padding-left:44px}
+  .tbl td small{font-family:var(--mono);color:var(--muted);margin-left:4px}
+  .tbl .pos{color:var(--pos)} .tbl .neg{color:var(--neg)}
+  .tbl.simple td:first-child,.tbl.simple th:first-child{position:static}
+  .exp{width:20px;height:20px;border:1px solid var(--line);background:var(--panel-2);color:var(--txt);border-radius:5px;cursor:pointer;margin-right:8px;line-height:1;font-family:var(--mono);padding:0}
+  .exp-sp{display:inline-block;width:28px}
+  .bar{display:inline-block;width:70px;height:6px;background:var(--panel-2);border-radius:3px;margin-right:8px;vertical-align:middle;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent)}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:16px;text-align:center}
+  .kpi span{display:block;font-size:11px;color:var(--muted);margin-bottom:8px}
+  .kpi b{font-family:var(--mono);font-size:26px}
+
+  @media (max-width:640px){
+    header,nav,main{padding-left:16px;padding-right:16px}
+    footer{padding:0 16px 28px}
+    .num{font-size:26px}
+    .grid{grid-auto-columns:minmax(240px,86%)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Resultados Económicos – City Center</h1>
+    <p class="sub" id="sub">City Center Rosario</p>
+  </div>
+  <div class="filters" id="filtros" hidden>
+    <div class="f"><label for="desde">Período</label>
+      <select id="desde" aria-label="Mes inicial"></select>
+      <span aria-hidden="true">–</span>
+      <select id="hasta" aria-label="Mes final"></select></div>
+    <div class="f"><label for="anio">Año</label><select id="anio"></select></div>
+    <div class="f"><span class="fixed">Real</span></div>
+  </div>
+</header>
+<nav id="tabs" role="tablist" aria-label="Unidades de negocio" hidden></nav>
+<main>
+  <div class="avisos" id="avisos"></div>
+  <div id="contenido"><div class="estado">Cargando datos…</div></div>
+</main>
+<footer id="pie"></footer>
+
+<script>
+const MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const ORDEN=['Casino','Casino Online','Hotel','AA&BB','Parking','Otros Negocios'];
+const CAMPOS=['ingresos','costos_fijos','costos_variables','personal','costos','ebitda','estructura','ebitda_final'];
+const S={anio:null,desde:1,hasta:12,tab:'Resumen'};
+let D=null;
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clave=(a,m)=>`${a}-${String(m).padStart(2,'0')}`;
+const vacio=()=>Object.fromEntries(CAMPOS.map(c=>[c,0]));
+const sumar=(a,b)=>{for(const c of CAMPOS)a[c]+=(b&&b[c])||0;return a};
+
+/* ---------- formato ---------- */
+function fM(v){const m=v/1e6,d=Math.abs(m)>=10?0:1;
+  return m.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d})+' M'}
+const fP=v=>v.toLocaleString('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+const signo=(t,v)=>(v>0?'+':'')+t;
+
+/* ---------- datos ---------- */
+const mesesDe=(fuente,anio)=>Object.keys(fuente||{}).filter(k=>k.startsWith(anio+'-')).map(k=>+k.slice(5)).sort((a,b)=>a-b);
+const anios=()=>[...new Set(Object.keys(D.meses).map(k=>+k.slice(0,4)))].sort((a,b)=>b-a);
+
+function agregar(col,fuente,anio,ms){
+  const acc=vacio();
+  for(const m of ms){
+    const r=fuente&&fuente[clave(anio,m)]&&fuente[clave(anio,m)].resultado;
+    if(!r)return null;               // comparativo incompleto: no se muestra
+    sumar(acc,col.get(r));
+  }
+  return acc;
+}
+function unidadesPresentes(){
+  const set=new Set();
+  for(const m of mesesDe(D.meses,S.anio))Object.keys(D.meses[clave(S.anio,m)].resultado).forEach(u=>set.add(u));
+  return ORDEN.filter(u=>set.has(u)).concat([...set].filter(u=>!ORDEN.includes(u)));
+}
+function columnas(){
+  const pres=unidadesPresentes();
+  if(S.tab==='Resumen'){
+    const cols=[{titulo:'Total unidades',sub:'Suma de las unidades de negocio',total:true,
+      get:r=>{const a=vacio();for(const u of Object.keys(r))sumar(a,r[u].total);return a}}];
+    for(const u of pres)cols.push({titulo:u==='Casino'?'Casino Total':u,sub:u==='Casino'?'Slots, Mesas, Poker y Bingo':'',get:r=>r[u]&&r[u].total});
+    return {cols,base:cols[0]};
+  }
+  const subs=new Set();
+  for(const m of mesesDe(D.meses,S.anio)){
+    const u=D.meses[clave(S.anio,m)].resultado[S.tab];
+    if(u)Object.keys(u.subunidades).forEach(s=>subs.add(s));
+  }
+  const orden=S.tab==='Casino'?['Slots','Mesas','Poker','Bingo']:[...subs].sort();
+  const total={titulo:S.tab==='Casino'?'Casino Total':S.tab+' – Total',sub:S.tab==='Casino'?'Slots, Mesas, Poker y Bingo':'',total:true,get:r=>r[S.tab]&&r[S.tab].total};
+  const cols=[total];
+  for(const s of orden.filter(x=>subs.has(x)))cols.push({titulo:s,sub:'',get:r=>r[S.tab]&&r[S.tab].subunidades[s]});
+  return {cols,base:total};
+}
+
+/* ---------- comparativos ---------- */
+const pct=(a,b)=>b?((a-b)/Math.abs(b))*100:null;
+const marg=x=>x.ingresos?x.ebitda/x.ingresos*100:null;
+function fila(k,txt,clase){return `<span class="k">${k}</span><span class="v ${clase||''}">${txt}</span>`}
+function dPct(a,b,malo){            // variación % ; malo=true: subir es malo (costos)
+  if(!b)return '<span class="v nd">—</span>';
+  const p=pct(a,b); if(p===null)return '—';
+  const bueno=malo?p<0:p>0; const c=Math.abs(p)<.05?'':(bueno?'pos':'neg');
+  return `<span class="v ${c}">${signo(fP(p),p)}</span>`;
+}
+function cmp(etq,a,b,campo,malo){
+  const v=(!b)?'<span class="v nd">—</span>':dPct(a[campo],b[campo],malo);
+  return `<span class="k">${etq}</span>${v}`;
+}
+function cmpPP(etq,a,b){
+  if(!b||marg(b)===null||marg(a)===null)return `<span class="k">${etq}</span><span class="v nd">—</span>`;
+  const d=marg(a)-marg(b),c=Math.abs(d)<.05?'':(d>0?'pos':'neg');
+  return `<span class="k">${etq}</span><span class="v ${c}">${signo(d.toLocaleString('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}),d)} pp</span>`;
+}
+
+/* ---------- render ---------- */
+function render(){
+  const ms=mesesDe(D.meses,S.anio).filter(m=>m>=S.desde&&m<=S.hasta);
+  const cont=$('contenido');
+  if(!ms.length){cont.innerHTML='<div class="estado"><strong>Sin datos en el período</strong>Elegí otro rango de meses.</div>';avisos([]);return}
+  if(ANALISIS.includes(S.tab)){cont.innerHTML=renderAnalisis(ms);avisos(ms);return}
+  const {cols,base}=columnas();
+  const baseAct=agregar(base,D.meses,S.anio,ms);
+  const html=cols.map(col=>{
+    const a=agregar(col,D.meses,S.anio,ms)||vacio();
+    const py=agregar(col,D.meses,S.anio-1,ms);           // mismo período del año anterior
+    const fc=agregar(col,D.forecast,S.anio,ms);          // forecast, si fue cargado
+    const sh=(!col.total&&baseAct&&baseAct.ingresos)?a.ingresos/baseAct.ingresos*100:null;
+    const m=marg(a), mFinal=a.ingresos?a.ebitda_final/a.ingresos*100:null;
+    const ing=`<div class="blk"><div class="lbl">Ingresos</div><div class="num">${fM(a.ingresos).replace(' M','<small> M</small>')}</div>
+      <div class="det">${cmp('vs Fc',a,fc,'ingresos',false)}${cmp('vs '+String(S.anio-1).slice(2),a,py,'ingresos',false)}
+      ${sh===null?'':`<span class="k">%Tot</span><span class="v">${fP(sh)}</span>`}</div></div>`;
+    const bloque=(tit,campo)=>`<div class="blk"><div class="lbl">${tit}</div><div class="num">${fM(a[campo]).replace(' M','<small> M</small>')}</div>
+      <div class="det">${cmp('vs Fc',a,fc,campo,true)}${cmp('vs '+String(S.anio-1).slice(2),a,py,campo,true)}
+      <span class="k">%Ing</span><span class="v">${a.ingresos?fP(a[campo]/a.ingresos*100):'—'}</span></div></div>`;
+    const cls=a.ebitda>0?'pos':(a.ebitda<0?'neg':'');
+    const est=Math.abs(a.estructura)>0.5;
+    const ebitda=`<div class="blk"><div class="lbl">EBITDA</div><div class="num ${cls}">${fM(a.ebitda).replace(' M','<small> M</small>')}</div>
+      ${est?`<div class="chip"><span>Estructura</span><b>−${fM(a.estructura)}</b></div>
+      <div class="final">EBITDA final <b>${fM(a.ebitda_final)}</b> (${mFinal===null?'—':fP(mFinal)})</div>`:''}
+      <div class="det">${cmpPP('vs Fc',a,fc)}${cmpPP('vs '+String(S.anio-1).slice(2),a,py)}
+      <span class="k">Margen</span><span class="v ${m===null?'':(m>=0?'pos':'neg')}">${m===null?'—':fP(m)}</span></div></div>`;
+    return `<section class="col"><div class="col-h"><h2>${esc(col.titulo)}</h2><p>${esc(col.sub||'')}</p></div>
+      ${ing}${bloque('Costos fijos y variables','costos')}${bloque('Gasto de personal','personal')}${ebitda}</section>`;
+  }).join('');
+  cont.innerHTML=`<div class="grid">${html}</div>`;
+  avisos(ms);
+}
+
+function avisos(ms){
+  const out=[];let lin=0,res=0,cecos=new Set(),nomap=0,imp=0,adv=[];
+  for(const m of ms){
+    const c=(D.meses[clave(S.anio,m)]||{}).controles;if(!c)continue;
+    if(c.sin_asignar&&c.sin_asignar.lineas){lin+=c.sin_asignar.lineas;res+=c.sin_asignar.resultado;c.sin_asignar.ceco.forEach(x=>cecos.add(x))}
+    if(c.cuentas_sin_mapeo){nomap+=c.cuentas_sin_mapeo.lineas;imp+=c.cuentas_sin_mapeo.importe_sap}
+    if(c.conciliacion&&Math.abs(c.conciliacion.diferencia)>1)adv.push(MESES[m-1]);
+  }
+  if(lin)out.push(`Centros sin unidad asignada (${[...cecos].join(', ')}): ${fM(res)} de resultado no está incluido en las unidades.`);
+  if(nomap)out.push(`${nomap} asientos con cuentas sin mapear quedaron fuera del resultado (importe neto: ${Math.abs(imp)<5e5?'0 M':fM(imp)}).`);
+  if(adv.length)out.push(`La conciliación no cierra en: ${adv.join(', ')}.`);
+  $('avisos').innerHTML=out.map(t=>`<div class="aviso">${esc(t)}</div>`).join('');
+}
+
+/* ====================== ANÁLISIS ====================== */
+const ANALISIS=['Evolución','Rubros','Gerencias','Estructura'];
+const ACR=/\b(iae|ccss|sac|tgi|drei|etur|aa&bb|ett|rrhh)\b/gi;
+const TILDES={maquinas:'máquinas',participacion:'participación',reparacion:'reparación',gastronomia:'gastronomía',gravamenes:'gravámenes',camara:'cámara',debitos:'débitos',creditos:'créditos',tecnica:'técnica',tecnicas:'técnicas',comunicacion:'comunicación',comunicaciones:'comunicaciones',alquileres:'alquileres',cortesias:'cortesías',indemnizaciones:'indemnizaciones',hosteleria:'hostelería',operacion:'operación',administracion:'administración'};
+const bonito=s=>{let t=String(s||'').toLowerCase().replace(/[a-záéíóúñ&]+/g,w=>TILDES[w]||w);return (t.charAt(0).toUpperCase()+t.slice(1)).replace(ACR,x=>x.toUpperCase())};
+const suma=a=>a.reduce((x,y)=>x+y,0);
+const fN=v=>{const m=v/1e6,d=Math.abs(m)>=10?0:1;return m.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d})};
+const mil=v=>(v/1e6).toLocaleString('es-AR',{maximumFractionDigits:0});
+S.ambito='*';S.gConc='total';S.exp=new Set();
+
+function sumUnits(r){const a=vacio();for(const u of Object.keys(r))sumar(a,r[u].total);return a}
+function ambitos(){
+  const out=[{id:'*',label:'Total unidades',u:null,s:null,get:sumUnits}];
+  for(const u of unidadesPresentes()){
+    out.push({id:u+'|',label:u==='Casino'?'Casino Total':u+' – total',u,s:null,get:r=>r[u]&&r[u].total});
+    const subs=new Set();
+    for(const m of mesesDe(D.meses,S.anio)){const x=D.meses[clave(S.anio,m)].resultado[u];if(x)Object.keys(x.subunidades).forEach(s=>subs.add(s))}
+    const orden=u==='Casino'?['Slots','Mesas','Poker','Bingo']:[...subs].sort();
+    for(const s of orden.filter(x=>subs.has(x)))out.push({id:u+'|'+s,label:u+' › '+s,u,s,get:r=>r[u]&&r[u].subunidades[s]});
+  }
+  return out;
+}
+const ambitoActual=()=>{const l=ambitos();return l.find(a=>a.id===S.ambito)||l[0]};
+function selAmbito(){
+  const l=ambitos(),act=ambitoActual();
+  return `<div class="toolbar"><label for="ambito">Ver</label><select id="ambito">${l.map(a=>`<option value="${esc(a.id)}"${a.id===act.id?' selected':''}>${esc(a.label)}</option>`).join('')}</select></div>`;
+}
+
+/* ---------- gráficos SVG ---------- */
+function ticks(min,max,n=4){
+  const span=(max-min)||1,raw=span/n,mag=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/mag;
+  const step=(f<=1?1:f<=2?2:f<=5?5:10)*mag,lo=Math.floor(min/step)*step,hi=Math.ceil(max/step)*step,t=[];
+  for(let v=lo;v<=hi+step/1e6;v+=step)t.push(v);
+  return t;
+}
+function marco(titulo,series,svg){
+  const ley=series.length>1?`<div class="ley">${series.map(s=>`<span><i style="background:${s.c}"></i>${esc(s.n)}</span>`).join('')}</div>`:'';
+  return `<div class="panel"><h3>${esc(titulo)}</h3>${ley}${svg}</div>`;
+}
+function chartBarras({titulo,etq,series,pct}){
+  const W=520,H=230,L=pct?44:54,R=10,T=12,B=26;
+  const vals=series.flatMap(s=>s.v).filter(v=>v!==null);
+  const tk=ticks(Math.min(0,...vals),Math.max(0,...vals)),lo=tk[0],hi=tk[tk.length-1];
+  const y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo)),band=(W-L-R)/etq.length,bw=Math.min(30,band*.78/series.length);
+  let g=tk.map(t=>`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="${t===0?'#41507a':'#1b2a4f'}"/><text x="${L-6}" y="${y(t)+3}" text-anchor="end">${pct?t.toLocaleString('es-AR')+'%':mil(t)}</text>`).join('');
+  etq.forEach((e,i)=>{
+    const cx=L+band*i+band/2;
+    series.forEach((s,k)=>{
+      const v=s.v[i];if(v===null)return;
+      const x=cx-bw*series.length/2+bw*k,y0=y(0),y1=y(v);
+      g+=`<rect x="${x.toFixed(1)}" y="${Math.min(y0,y1).toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${Math.max(1,Math.abs(y1-y0)).toFixed(1)}" rx="2" fill="${s.c}"><title>${e} · ${s.n}: ${pct?v.toLocaleString('es-AR',{maximumFractionDigits:1})+'%':fM(v)}</title></rect>`;
+    });
+    g+=`<text x="${cx}" y="${H-8}" text-anchor="middle">${e}</text>`;
+  });
+  return marco(titulo,series,`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titulo)}">${g}</svg>`);
+}
+function chartLinea({titulo,etq,series}){
+  const W=520,H=230,L=44,R=14,T=12,B=26;
+  const vals=series.flatMap(s=>s.v).filter(v=>v!==null);
+  if(!vals.length)return marco(titulo,series,'<p class="vacio">Sin datos</p>');
+  const tk=ticks(Math.min(0,...vals),Math.max(0,...vals)),lo=tk[0],hi=tk[tk.length-1];
+  const y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo)),band=(W-L-R)/etq.length,xs=i=>L+band*i+band/2;
+  let g=tk.map(t=>`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="${t===0?'#41507a':'#1b2a4f'}"/><text x="${L-6}" y="${y(t)+3}" text-anchor="end">${t.toLocaleString('es-AR')}%</text>`).join('');
+  etq.forEach((e,i)=>{g+=`<text x="${xs(i)}" y="${H-8}" text-anchor="middle">${e}</text>`});
+  for(const s of series){
+    let d='',pen=false;
+    s.v.forEach((v,i)=>{if(v===null){pen=false;return}d+=(pen?'L':'M')+xs(i).toFixed(1)+' '+y(v).toFixed(1)+' ';pen=true});
+    g+=`<path d="${d}" fill="none" stroke="${s.c}" stroke-width="2.2" stroke-linejoin="round"/>`;
+    s.v.forEach((v,i)=>{if(v!==null)g+=`<circle cx="${xs(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3.2" fill="${s.c}"><title>${etq[i]} · ${s.n}: ${v.toLocaleString('es-AR',{maximumFractionDigits:1})}%</title></circle>`});
+  }
+  return marco(titulo,series,`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titulo)}">${g}</svg>`);
+}
+
+/* ---------- router ---------- */
+function renderAnalisis(ms){
+  if(S.tab==='Evolución')return renderEvolucion(ms);
+  if(S.tab==='Rubros')return renderRubros(ms);
+  if(S.tab==='Gerencias')return renderGerencias(ms);
+  return renderEstructura(ms);
+}
+const faltaDetalle='<div class="estado"><strong>Falta el detalle de estos meses</strong>Volvé a procesar las bajadas con la última versión de <code>procesar_mes.py</code> y subí el <code>acumulado.json</code> nuevo.</div>';
+const pctDe=(a,b)=>b?a/b*100:null;
+
+/* ---------- Evolución ---------- */
+function renderEvolucion(ms){
+  const amb=ambitoActual();
+  const filas=ms.map(m=>{const x=amb.get(D.meses[clave(S.anio,m)].resultado)||vacio();
+    return {m,x,mrg:pctDe(x.ebitda,x.ingresos),mf:pctDe(x.ebitda_final,x.ingresos)}});
+  const et=filas.map(f=>MESES[f.m-1]),hayEst=filas.some(f=>Math.abs(f.x.estructura)>0.5);
+  const ser=[{n:'EBITDA',c:'#22c55e',v:filas.map(f=>f.x.ebitda)}];
+  if(hayEst)ser.push({n:'EBITDA final',c:'#5b8def',v:filas.map(f=>f.x.ebitda_final)});
+  const serM=[{n:'Margen EBITDA',c:'#22c55e',v:filas.map(f=>f.mrg)}];
+  if(hayEst)serM.push({n:'Margen final',c:'#5b8def',v:filas.map(f=>f.mf)});
+  const charts=
+    chartBarras({titulo:'Ingresos (millones de $)',etq:et,series:[{n:'Ingresos',c:'#f2731a',v:filas.map(f=>f.x.ingresos)}]})+
+    chartBarras({titulo:'EBITDA (millones de $)',etq:et,series:ser})+
+    chartLinea({titulo:'Margen sobre ingresos',etq:et,series:serM})+
+    chartLinea({titulo:'Costos y personal sobre ingresos',etq:et,series:[
+      {n:'Costos fijos y variables',c:'#f2731a',v:filas.map(f=>pctDe(f.x.costos,f.x.ingresos))},
+      {n:'Gasto de personal',c:'#a78bfa',v:filas.map(f=>pctDe(f.x.personal,f.x.ingresos))}]});
+  const T=filas.reduce((a,f)=>sumar(a,f.x),vacio());
+  const fila=(n,x,cls)=>`<tr class="${cls||''}"><td>${n}</td><td>${fN(x.ingresos)}</td><td>${fN(x.costos)}</td><td>${fN(x.personal)}</td><td class="${x.ebitda>=0?'pos':'neg'}">${fN(x.ebitda)}</td>${hayEst?`<td>${fN(x.estructura)}</td><td class="${x.ebitda_final>=0?'pos':'neg'}">${fN(x.ebitda_final)}</td>`:''}<td>${x.ingresos?fP(x.ebitda/x.ingresos*100):'–'}</td></tr>`;
+  const tabla=`<div class="panel"><h3>Detalle mensual (millones de $)</h3><div class="scroll"><table class="tbl"><thead><tr><th>Mes</th><th>Ingresos</th><th>Costos fijos y var.</th><th>Personal</th><th>EBITDA</th>${hayEst?'<th>Estructura</th><th>EBITDA final</th>':''}<th>Margen</th></tr></thead><tbody>${filas.map(f=>fila(MESES[f.m-1]+' '+S.anio,f.x)).join('')}${fila('Acumulado',T,'tot')}</tbody></table></div></div>`;
+  return selAmbito()+`<div class="charts">${charts}</div>`+tabla;
+}
+
+/* ---------- Rubros ---------- */
+function renderRubros(ms){
+  const amb=ambitoActual();let falta=false;
+  const G={I:{},C:{},P:{}},tot={I:{},C:{},P:{}};
+  for(const m of ms){
+    const det=D.meses[clave(S.anio,m)].detalle;if(!det){falta=true;continue}
+    for(const [u,s,t,c,sc,imp] of det.rubros){
+      if(amb.u&&u!==amb.u)continue;if(amb.s&&s!==amb.s)continue;
+      const g=t==='I'?'I':(c==='GASTO DE PERSONAL'?'P':'C');
+      const cat=G[g][c]||(G[g][c]={tot:0,m:{},subs:{}});
+      cat.tot+=imp;cat.m[m]=(cat.m[m]||0)+imp;
+      const sb=cat.subs[sc]||(cat.subs[sc]={tot:0,m:{}});
+      sb.tot+=imp;sb.m[m]=(sb.m[m]||0)+imp;
+      tot[g][m]=(tot[g][m]||0)+imp;
+    }
+  }
+  if(falta)return selAmbito()+faltaDetalle;
+  const sg=g=>suma(ms.map(m=>tot[g][m]||0)),ing=sg('I');
+  const celdas=(mm,t,cls)=>ms.map(m=>`<td>${mm[m]?fN(mm[m]):'–'}</td>`).join('')+`<td class="tt ${cls||''}">${fN(t)}</td><td>${ing?fP(t/ing*100):'–'}</td>`;
+  const grupo=(nombre,g)=>{
+    let h=`<tr class="g"><td>${nombre}</td>${celdas(tot[g],sg(g))}</tr>`;
+    const cats=Object.entries(G[g]).sort((a,b)=>Math.abs(b[1].tot)-Math.abs(a[1].tot));
+    for(const [c,o] of cats){
+      const subs=Object.entries(o.subs).sort((a,b)=>Math.abs(b[1].tot)-Math.abs(a[1].tot));
+      if(g==='P'&&cats.length===1){for(const [sc,so] of subs)h+=`<tr><td class="cat"><span class="exp-sp"></span>${esc(bonito(sc))}</td>${celdas(so.m,so.tot)}</tr>`;continue}
+      const abre=subs.length>1,k=g+'|'+c,open=S.exp.has(k);
+      h+=`<tr><td class="cat">${abre?`<button class="exp" data-k="${esc(k)}" aria-expanded="${open}" aria-label="Ver detalle de ${esc(bonito(c))}">${open?'−':'+'}</button>`:'<span class="exp-sp"></span>'}${esc(bonito(c))}</td>${celdas(o.m,o.tot)}</tr>`;
+      if(abre&&open)for(const [sc,so] of subs)h+=`<tr class="sub"><td class="cat2">${esc(bonito(sc))}</td>${celdas(so.m,so.tot)}</tr>`;
+    }
+    return h;
+  };
+  const e={};ms.forEach(m=>{e[m]=(tot.I[m]||0)-(tot.C[m]||0)-(tot.P[m]||0)});
+  const et=suma(Object.values(e));
+  const cab=`<tr><th>Concepto (millones de $)</th>${ms.map(m=>`<th>${MESES[m-1]}</th>`).join('')}<th>Total</th><th>% ing.</th></tr>`;
+  const cuerpo=grupo('Ingresos','I')+grupo('Costos fijos y variables','C')+grupo('Gasto de personal','P')+
+    `<tr class="g eb"><td>EBITDA (antes de estructura)</td>${celdas(e,et,et>=0?'pos':'neg')}</tr>`;
+  return selAmbito()+`<div class="panel"><h3>Detalle por rubro</h3><p class="nota">Tocá + para ver el desglose de cada rubro. Incluye la parte del Casino genérico que se reparte a Slots y Mesas; la Estructura se ve en su pestaña.</p><div class="scroll"><table class="tbl rub"><thead>${cab}</thead><tbody>${cuerpo}</tbody></table></div></div>`;
+}
+
+/* ---------- Gerencias ---------- */
+function renderGerencias(ms){
+  const mat={};let falta=false;
+  for(const m of ms){
+    const det=D.meses[clave(S.anio,m)].detalle;if(!det){falta=true;continue}
+    for(const [ger,porU] of Object.entries(det.gerencias))for(const [etq,v] of Object.entries(porU)){
+      const o=((mat[ger]=mat[ger]||{})[etq]=mat[ger][etq]||[0,0]);o[0]+=v[0];o[1]+=v[1];
+    }
+  }
+  if(falta)return faltaDetalle;
+  const val=v=>S.gConc==='personal'?v[0]:(S.gConc==='otros'?v[1]:v[0]+v[1]);
+  const presentes=new Set();Object.values(mat).forEach(o=>Object.keys(o).forEach(k=>presentes.add(k)));
+  const orden=[...unidadesPresentes(),'Casino genérico','Estructura','Sin asignar'].filter(k=>presentes.has(k));
+  const nombres=(D.meta&&D.meta.gerencias)||{};
+  const filas=Object.entries(mat).map(([g,o])=>({g,o,t:suma(Object.values(o).map(val))})).sort((a,b)=>b.t-a.t);
+  const T=suma(filas.map(f=>f.t)),mx=Math.max(1,...filas.flatMap(f=>orden.map(k=>Math.abs(f.o[k]?val(f.o[k]):0))));
+  const tc=k=>suma(filas.map(f=>f.o[k]?val(f.o[k]):0));
+  const sel=`<div class="toolbar"><label for="gconc">Concepto</label><select id="gconc">${[['total','Costos totales (incluye personal)'],['personal','Solo gasto de personal'],['otros','Costos fijos y variables sin personal']].map(([v,t])=>`<option value="${v}"${S.gConc===v?' selected':''}>${t}</option>`).join('')}</select></div>`;
+  const cab=`<tr><th>Gerencia</th>${orden.map(k=>`<th>${esc(k)}</th>`).join('')}<th>Total</th><th>% del total</th></tr>`;
+  const cuerpo=filas.map(f=>`<tr><td class="cat">${esc(nombres[f.g]||f.g)} <small>${esc(f.g)}</small></td>${orden.map(k=>{const v=f.o[k]?val(f.o[k]):0;return `<td${v?` style="background:rgba(242,115,26,${Math.min(.5,Math.abs(v)/mx*.5).toFixed(2)})"`:''}>${v?fN(v):'–'}</td>`}).join('')}<td class="tt">${fN(f.t)}</td><td><span class="bar"><i style="width:${T?Math.max(0,Math.min(100,f.t/T*100)).toFixed(1):0}%"></i></span>${T?fP(f.t/T*100):'–'}</td></tr>`).join('');
+  const pie=`<tr class="g"><td>Total</td>${orden.map(k=>`<td>${fN(tc(k))}</td>`).join('')}<td class="tt">${fN(T)}</td><td>100%</td></tr>`;
+  return sel+`<div class="panel"><h3>Costos por gerencia (millones de $)</h3><p class="nota">La gerencia es quien gestiona el gasto. Las columnas son la unidad o el centro donde se imputa. "Casino genérico" y "Estructura" se muestran antes de repartirse.</p><div class="scroll"><table class="tbl ger"><thead>${cab}</thead><tbody>${cuerpo}${pie}</tbody></table></div></div>`;
+}
+
+/* ---------- Estructura y reparto ---------- */
+function renderEstructura(ms){
+  let falta=false,total=0,gen=0;const rub={},ger={},cen={},base={},monto={},genRep={},porMes=[];
+  for(const m of ms){
+    const det=D.meses[clave(S.anio,m)].detalle;if(!det){falta=true;continue}
+    const e=det.estructura;total+=e.total;
+    for(const [c,ch,v] of e.por_rubro){const k=c+'|'+ch;rub[k]=(rub[k]||0)+v}
+    for(const [k,v] of Object.entries(e.por_gerencia))ger[k]=(ger[k]||0)+v;
+    for(const [k,v] of Object.entries(e.por_centro))cen[k]=(cen[k]||0)+v;
+    for(const [s,[b,mo]] of Object.entries(e.reparto)){base[s]=(base[s]||0)+b;monto[s]=(monto[s]||0)+mo}
+    gen+=det.generico.total;for(const [s,v] of Object.entries(det.generico.reparto))genRep[s]=(genRep[s]||0)+v;
+    const c=D.meses[clave(S.anio,m)].resultado.Casino;
+    porMes.push({m,est:e.total,ing:c?c.total.ingresos:0});
+  }
+  if(falta)return faltaDetalle;
+  const ingC=suma(porMes.map(x=>x.ing)),bT=suma(Object.values(base));
+  const lista=(obj,fmt)=>{const a=Object.entries(obj).filter(([,v])=>Math.abs(v)>0.5).sort((x,y)=>y[1]-x[1]);
+    return a.map(([k,v])=>`<tr><td class="cat">${esc(fmt(k))}</td><td>${fN(v)}</td><td><span class="bar"><i style="width:${total?Math.max(0,Math.min(100,v/total*100)).toFixed(1):0}%"></i></span>${total?fP(v/total*100):'–'}</td></tr>`).join('')};
+  const tablaSimple=(tit,obj,fmt,nota)=>`<div class="panel"><h3>${tit}</h3>${nota?`<p class="nota">${nota}</p>`:''}<table class="tbl simple"><thead><tr><th>Concepto</th><th>Millones de $</th><th>% de la Estructura</th></tr></thead><tbody>${lista(obj,fmt)}</tbody></table></div>`;
+  const nombres=(D.meta&&D.meta.gerencias)||{};
+  const centros={'90000':'Estructura – genérico (90000)','90001':'Estructura – corporativa (90001)'};
+  const kpis=`<div class="kpis"><div class="kpi"><span>Estructura del período</span><b>${fM(total)}</b></div><div class="kpi"><span>% de los ingresos del Casino</span><b>${ingC?fP(total/ingC*100):'–'}</b></div><div class="kpi"><span>Promedio mensual</span><b>${ms.length?fM(total/ms.length):'–'}</b></div></div>`;
+  const filasR=['Slots','Mesas','Poker','Bingo'].filter(s=>s in base).map(s=>{
+    const a=agregar({get:r=>r.Casino&&r.Casino.subunidades[s]},D.meses,S.anio,ms)||vacio();
+    return `<tr><td class="cat">${s}</td><td>${fN(base[s])}</td><td>${bT?fP(base[s]/bT*100):'–'}</td><td class="tt">${fN(monto[s])}</td><td>${total?fP(monto[s]/total*100):'–'}</td><td class="${a.ebitda>=0?'pos':'neg'}">${fN(a.ebitda)}</td><td class="${a.ebitda_final>=0?'pos':'neg'}">${fN(a.ebitda_final)}</td></tr>`}).join('');
+  const reparto=`<div class="panel"><h3>Cómo se reparte entre los negocios de juego físico</h3><p class="nota">Cada mes, la Estructura se distribuye entre Slots, Mesas, Poker y Bingo en proporción a sus ingresos de ese mes. Acá se muestran los meses seleccionados sumados.</p><div class="scroll"><table class="tbl simple"><thead><tr><th>Negocio</th><th>Ingresos</th><th>% de ingresos</th><th>Estructura asignada</th><th>% de la Estructura</th><th>EBITDA</th><th>EBITDA final</th></tr></thead><tbody>${filasR}</tbody></table></div></div>`;
+  const generico=`<div class="panel"><h3>Casino genérico (centro 01000)</h3>${Math.abs(gen)>0.5?`<p class="nota">Se reparte entre Slots y Mesas según sus ingresos.</p><table class="tbl simple"><thead><tr><th>Total del período</th>${Object.keys(genRep).map(s=>`<th>${s}</th>`).join('')}</tr></thead><tbody><tr><td class="tt">${fN(gen)} M</td>${Object.values(genRep).map(v=>`<td>${fN(v)} M</td>`).join('')}</tr></tbody></table>`:'<p class="nota">En el período no quedó ningún importe para repartir en este centro.</p>'}</div>`;
+  const et=porMes.map(x=>MESES[x.m-1]);
+  const graf=chartBarras({titulo:'Estructura por mes (millones de $)',etq:et,series:[{n:'Estructura',c:'#f2731a',v:porMes.map(x=>x.est)}]})+
+    chartLinea({titulo:'Estructura sobre ingresos del Casino',etq:et,series:[{n:'% de ingresos',c:'#f2731a',v:porMes.map(x=>pctDe(x.est,x.ing))}]});
+  return kpis+`<div class="charts">${graf}</div>`+reparto+
+    `<div class="charts2">${tablaSimple('Qué la compone: por rubro',rub,k=>{const [c,ch]=k.split('|');return c===ch?bonito(c):bonito(c)+' › '+bonito(ch)})}${tablaSimple('Qué la compone: por gerencia',ger,k=>nombres[k]||k)}</div>`+
+    (Object.keys(cen).length>1?tablaSimple('Por centro de coste',cen,k=>centros[k]||k):'')+generico;
+}
+
+/* ---------- controles de interfaz ---------- */
+function llenarMeses(){
+  const ms=mesesDe(D.meses,S.anio);
+  if(!ms.includes(S.desde)||!ms.includes(S.hasta)){S.desde=ms[0];S.hasta=ms[ms.length-1]}
+  const op=ms.map(m=>`<option value="${m}">${MESES[m-1]}</option>`).join('');
+  $('desde').innerHTML=op;$('hasta').innerHTML=op;
+  $('desde').value=S.desde;$('hasta').value=S.hasta;
+}
+function tabs(){
+  const lista=['Resumen',...unidadesPresentes()];
+  if(!lista.includes(S.tab)&&!ANALISIS.includes(S.tab))S.tab='Resumen';
+  const btn=t=>`<button role="tab" aria-selected="${t===S.tab}" data-t="${esc(t)}">${esc(t)}</button>`;
+  $('tabs').innerHTML=lista.map(btn).join('')+'<span class="sep" aria-hidden="true"></span>'+ANALISIS.map(btn).join('');
+}
+
+function iniciar(){
+  const ys=anios();
+  S.anio=ys[0];
+  $('anio').innerHTML=ys.map(y=>`<option>${y}</option>`).join('');
+  $('anio').value=S.anio;
+  llenarMeses();tabs();
+  $('filtros').hidden=false;$('tabs').hidden=false;
+  $('sub').textContent='City Center Rosario · '+S.anio;
+  const ult=Object.keys(D.meses).sort().pop();
+  const f=D.meta&&D.meta.actualizado?new Date(D.meta.actualizado).toLocaleString('es-AR',{dateStyle:'short',timeStyle:'short'}):'';
+  $('pie').textContent=`Importes en millones de pesos (ARS). Último mes cargado: ${MESES[+ult.slice(5)-1]} ${ult.slice(0,4)}${f?' · Actualizado '+f:''}`;
+  render();
+}
+
+$('anio').addEventListener('change',e=>{S.anio=+e.target.value;$('sub').textContent='City Center Rosario · '+S.anio;llenarMeses();tabs();render()});
+$('desde').addEventListener('change',e=>{S.desde=+e.target.value;if(S.hasta<S.desde){S.hasta=S.desde;$('hasta').value=S.hasta}render()});
+$('hasta').addEventListener('change',e=>{S.hasta=+e.target.value;if(S.desde>S.hasta){S.desde=S.hasta;$('desde').value=S.desde}render()});
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;S.tab=b.dataset.t;tabs();render()});
+
+$('contenido').addEventListener('change',e=>{
+  if(e.target.id==='ambito'){S.ambito=e.target.value;render()}
+  if(e.target.id==='gconc'){S.gConc=e.target.value;render()}
+});
+$('contenido').addEventListener('click',e=>{
+  const b=e.target.closest('.exp');if(!b)return;
+  const k=b.dataset.k;S.exp.has(k)?S.exp.delete(k):S.exp.add(k);render();
+});
+
+fetch('data/acumulado.json?v='+Date.now(),{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+  .then(j=>{D=j;if(!D.meses||!Object.keys(D.meses).length)throw new Error('vacío');iniciar()})
+  .catch(()=>{$('contenido').innerHTML='<div class="estado"><strong>No hay datos para mostrar</strong>Falta el archivo <code>public/data/acumulado.json</code> o está vacío. Procesá una bajada con <code>procesar_mes.py</code> y volvé a publicar.</div>'});
+</script>
+</body>
+</html>
