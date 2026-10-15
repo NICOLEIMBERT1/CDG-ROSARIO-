@@ -1,0 +1,721 @@
+{
+ "meta": {
+  "moneda": "ARS",
+  "criterio_signos": "ingresos y costos positivos",
+  "actualizado": "2026-10-15T14:51:09"
+ },
+ "meses": {
+  "2026-09": {
+   "resultado": {
+    "AA&BB": {
+     "subunidades": {
+      "360 Express": {
+       "ingresos": 37851406.71,
+       "costos_fijos": 2560922.25,
+       "costos_variables": 16275095.030000001,
+       "personal": 19292545.540000003,
+       "costos": 18836017.28,
+       "ebitda": -277156.11000000313,
+       "estructura": 0.0,
+       "ebitda_final": -277156.11000000313
+      },
+      "Circus": {
+       "ingresos": 22289091.67,
+       "costos_fijos": 1953615.65,
+       "costos_variables": 8938077.879999999,
+       "personal": 17449868.979999997,
+       "costos": 10891693.53,
+       "ebitda": -6052470.839999994,
+       "estructura": 0.0,
+       "ebitda_final": -6052470.839999994
+      },
+      "Comedor Personal": {
+       "ingresos": 0.010000000009313226,
+       "costos_fijos": -2.3283064365386963e-10,
+       "costos_variables": 0.030000000726431608,
+       "personal": 0.01000000536441803,
+       "costos": 0.030000000493600965,
+       "ebitda": -0.03000000584870577,
+       "estructura": 0.0,
+       "ebitda_final": -0.03000000584870577
+      },
+      "Generico AA&BB Casino": {
+       "ingresos": 0.0,
+       "costos_fijos": -0.10000000149011612,
+       "costos_variables": 3.725290298461914e-09,
+       "personal": 0.0299999937415123,
+       "costos": -0.09999999776482582,
+       "ebitda": 0.07000000402331352,
+       "estructura": 0.0,
+       "ebitda_final": 0.07000000402331352
+      },
+      "Generico AA&BB Complejo": {
+       "ingresos": 0.0,
+       "costos_fijos": -0.12999999755993485,
+       "costos_variables": 0.010000000707805157,
+       "personal": 0.0,
+       "costos": -0.1199999968521297,
+       "ebitda": 0.1199999968521297,
+       "estructura": 0.0,
+       "ebitda_final": 0.1199999968521297
+      },
+      "Hamelin": {
+       "ingresos": 118015543.08,
+       "costos_fijos": 8259591.59,
+       "costos_variables": 46932081.660000004,
+       "personal": 116080253.87,
+       "costos": 55191673.25,
+       "ebitda": -53256384.04000001,
+       "estructura": 0.0,
+       "ebitda_final": -53256384.04000001
+      },
+      "Jarana": {
+       "ingresos": 45539091.92,
+       "costos_fijos": 3001447.85,
+       "costos_variables": 14456648.809999999,
+       "personal": 29343104.770000003,
+       "costos": 17458096.66,
+       "ebitda": -1262109.5100000016,
+       "estructura": 0.0,
+       "ebitda_final": -1262109.5100000016
+      },
+      "Remember": {
+       "ingresos": 133933478.82000001,
+       "costos_fijos": 9262278.22,
+       "costos_variables": 48956136.4,
+       "personal": 144139924.80999997,
+       "costos": 58218414.62,
+       "ebitda": -68424860.60999995,
+       "estructura": 0.0,
+       "ebitda_final": -68424860.60999995
+      },
+      "Site Vip": {
+       "ingresos": 31972732.82,
+       "costos_fijos": 1547207.7100000004,
+       "costos_variables": 8846418.31,
+       "personal": 31276858.11,
+       "costos": 10393626.020000001,
+       "ebitda": -9697751.310000002,
+       "estructura": 0.0,
+       "ebitda_final": -9697751.310000002
+      },
+      "Vip Slot": {
+       "ingresos": 59470891.36,
+       "costos_fijos": 3211954.5299999993,
+       "costos_variables": 17268402.17,
+       "personal": 45440284.08000001,
+       "costos": 20480356.700000003,
+       "ebitda": -6449749.420000017,
+       "estructura": 0.0,
+       "ebitda_final": -6449749.420000017
+      }
+     },
+     "total": {
+      "ingresos": 449072236.39,
+      "costos_fijos": 29797017.57,
+      "costos_variables": 161672860.3,
+      "personal": 403022840.2,
+      "costos": 191469877.87,
+      "ebitda": -145420481.67999998,
+      "estructura": 0.0,
+      "ebitda_final": -145420481.67999998
+     }
+    },
+    "Casino": {
+     "subunidades": {
+      "Bingo": {
+       "ingresos": 9011250.0,
+       "costos_fijos": 3080779.05,
+       "costos_variables": 8807991.559999999,
+       "personal": 4221580.45,
+       "costos": 11888770.61,
+       "ebitda": -7099101.06,
+       "estructura": 479607.53727230243,
+       "ebitda_final": -7578708.597272302
+      },
+      "Mesas": {
+       "ingresos": 2337459519.47,
+       "costos_fijos": 119287943.935026,
+       "costos_variables": 846782938.207861,
+       "personal": 1205566925.5764177,
+       "costos": 966070882.142887,
+       "ebitda": 165821711.750695,
+       "estructura": 124407069.34184559,
+       "ebitda_final": 41414642.4088494
+      },
+      "Poker": {
+       "ingresos": 34780787.5,
+       "costos_fijos": 12141034.129999999,
+       "costos_variables": 9831827.169999998,
+       "personal": 14129498.6,
+       "costos": 21972861.299999997,
+       "ebitda": -1321572.3999999966,
+       "estructura": 1851144.7176880324,
+       "ebitda_final": -3172717.117688029
+      },
+      "Slots": {
+       "ingresos": 8589614332.86,
+       "costos_fijos": 859523709.0849742,
+       "costos_variables": 3950548730.812139,
+       "personal": 2552454827.8235826,
+       "costos": 4810072439.897113,
+       "ebitda": 1227087065.1393042,
+       "estructura": 457166738.9431939,
+       "ebitda_final": 769920326.1961102
+      }
+     },
+     "total": {
+      "ingresos": 10970865889.83,
+      "costos_fijos": 994033466.2000002,
+      "costos_variables": 4815971487.75,
+      "personal": 3776372832.4500003,
+      "costos": 5810004953.95,
+      "ebitda": 1384488103.429999,
+      "estructura": 583904560.5399998,
+      "ebitda_final": 800583542.8899993
+     }
+    },
+    "Casino Online": {
+     "subunidades": {
+      "Casino Online y Deportivas": {
+       "ingresos": 7613020318.5,
+       "costos_fijos": 586071774.39,
+       "costos_variables": 5373214086.87,
+       "personal": 241014739.04,
+       "costos": 5959285861.26,
+       "ebitda": 1412719718.1999998,
+       "estructura": 0.0,
+       "ebitda_final": 1412719718.1999998
+      },
+      "Poker Online": {
+       "ingresos": 114774192.96999998,
+       "costos_fijos": 5719782.470000001,
+       "costos_variables": 81178619.68,
+       "personal": 24037561.62,
+       "costos": 86898402.15,
+       "ebitda": 3838229.199999977,
+       "estructura": 0.0,
+       "ebitda_final": 3838229.199999977
+      }
+     },
+     "total": {
+      "ingresos": 7727794511.47,
+      "costos_fijos": 591791556.86,
+      "costos_variables": 5454392706.55,
+      "personal": 265052300.66,
+      "costos": 6046184263.41,
+      "ebitda": 1416557947.3999999,
+      "estructura": 0.0,
+      "ebitda_final": 1416557947.3999999
+     }
+    },
+    "Hotel": {
+     "subunidades": {
+      "AA&BB Hotel": {
+       "ingresos": 88219633.66999999,
+       "costos_fijos": 15076044.760000004,
+       "costos_variables": 32559425.32,
+       "personal": 25365130.259999987,
+       "costos": 47635470.080000006,
+       "ebitda": 15219033.329999994,
+       "estructura": 0.0,
+       "ebitda_final": 15219033.329999994
+      },
+      "Alojamiento": {
+       "ingresos": 429011412.21000004,
+       "costos_fijos": 104255458.68,
+       "costos_variables": 85339971.52000001,
+       "personal": 257230752.33000004,
+       "costos": 189595430.20000002,
+       "ebitda": -17814770.320000023,
+       "estructura": 0.0,
+       "ebitda_final": -17814770.320000023
+      },
+      "Salones": {
+       "ingresos": 510834060.6399999,
+       "costos_fijos": 28814995.160000004,
+       "costos_variables": 140328358.93,
+       "personal": 174926938.03000003,
+       "costos": 169143354.09,
+       "ebitda": 166763768.51999992,
+       "estructura": 0.0,
+       "ebitda_final": 166763768.51999992
+      }
+     },
+     "total": {
+      "ingresos": 1028065106.52,
+      "costos_fijos": 148146498.60000002,
+      "costos_variables": 258227755.77,
+      "personal": 457522820.62000006,
+      "costos": 406374254.37,
+      "ebitda": 164168031.52999988,
+      "estructura": 0.0,
+      "ebitda_final": 164168031.52999988
+     }
+    },
+    "Otros Negocios": {
+     "subunidades": {
+      "Alquiler de Locales": {
+       "ingresos": 29361834.19,
+       "costos_fijos": 13903039.920000002,
+       "costos_variables": 1593751.2699999998,
+       "personal": 0.0,
+       "costos": 15496791.190000001,
+       "ebitda": 13865043.0,
+       "estructura": 0.0,
+       "ebitda_final": 13865043.0
+      },
+      "Shows": {
+       "ingresos": 0.0,
+       "costos_fijos": 0.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 0.0,
+       "ebitda": 0.0,
+       "estructura": 0.0,
+       "ebitda_final": 0.0
+      }
+     },
+     "total": {
+      "ingresos": 29361834.19,
+      "costos_fijos": 13903039.920000002,
+      "costos_variables": 1593751.2699999998,
+      "personal": 0.0,
+      "costos": 15496791.190000001,
+      "ebitda": 13865043.0,
+      "estructura": 0.0,
+      "ebitda_final": 13865043.0
+     }
+    },
+    "Parking": {
+     "subunidades": {
+      "Cubierto": {
+       "ingresos": 120631872.22,
+       "costos_fijos": 1054500.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 1054500.0,
+       "ebitda": 119577372.22,
+       "estructura": 0.0,
+       "ebitda_final": 119577372.22
+      },
+      "Descubierto": {
+       "ingresos": 70456296.82,
+       "costos_fijos": 300000.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 300000.0,
+       "ebitda": 70156296.82,
+       "estructura": 0.0,
+       "ebitda_final": 70156296.82
+      },
+      "Generico": {
+       "ingresos": 26053341.27,
+       "costos_fijos": 107075281.80000001,
+       "costos_variables": 15062733.620000001,
+       "personal": 41922894.79,
+       "costos": 122138015.42000002,
+       "ebitda": -138007568.94000003,
+       "estructura": 0.0,
+       "ebitda_final": -138007568.94000003
+      }
+     },
+     "total": {
+      "ingresos": 217141510.31,
+      "costos_fijos": 108429781.80000001,
+      "costos_variables": 15062733.620000001,
+      "personal": 41922894.79,
+      "costos": 123492515.42000002,
+      "ebitda": 51726100.099999964,
+      "estructura": 0.0,
+      "ebitda_final": 51726100.099999964
+     }
+    }
+   },
+   "controles": {
+    "avisos": [
+     "115 asientos en centros sin unidad asignada: ['80000']"
+    ],
+    "casino_generico": {
+     "ingresos": 4.656612873077393e-10,
+     "costos_fijos": -0.06999993324279785,
+     "costos_variables": -0.01000000536441803,
+     "personal": 0.029999852180480957
+    },
+    "casino_generico_reparto": {
+     "Slots": 0.7860855018407714,
+     "Mesas": 0.2139144981592285
+    },
+    "estructura_total": 583904560.5399998,
+    "estructura_reparto": {
+     "Slots": 0.7829477107019035,
+     "Mesas": 0.21306062282985577,
+     "Poker": 0.0031702864522518514,
+     "Bingo": 0.0008213800159888414
+    },
+    "excluido_disco": {
+     "lineas": 0,
+     "resultado": 0.0
+    },
+    "sin_asignar": {
+     "lineas": 115,
+     "resultado": -37019867.33000002,
+     "ceco": [
+      "80000"
+     ]
+    },
+    "cuentas_sin_mapeo": {
+     "lineas": 0,
+     "importe_sap": 0.0,
+     "cuentas": []
+    },
+    "conciliacion": {
+     "resultado_bajada_mapeada": 2264460315.909999,
+     "resultado_unidades": 2301480183.239999,
+     "diferencia": 0.0
+    },
+    "totales_por_ledger": {
+     "0L": {
+      "count": 13973,
+      "sum": -2264460315.91
+     },
+     "ZC": {
+      "count": 10991,
+      "sum": -0.0
+     }
+    }
+   }
+  }
+ },
+ "acumulado_anual": {
+  "2026": {
+   "hasta": "2026-09",
+   "unidades": {
+    "AA&BB": {
+     "subunidades": {
+      "360 Express": {
+       "ingresos": 37851406.71,
+       "costos_fijos": 2560922.25,
+       "costos_variables": 16275095.030000001,
+       "personal": 19292545.540000003,
+       "costos": 18836017.28,
+       "ebitda": -277156.11000000313,
+       "estructura": 0.0,
+       "ebitda_final": -277156.11000000313
+      },
+      "Circus": {
+       "ingresos": 22289091.67,
+       "costos_fijos": 1953615.65,
+       "costos_variables": 8938077.879999999,
+       "personal": 17449868.979999997,
+       "costos": 10891693.53,
+       "ebitda": -6052470.839999994,
+       "estructura": 0.0,
+       "ebitda_final": -6052470.839999994
+      },
+      "Comedor Personal": {
+       "ingresos": 0.010000000009313226,
+       "costos_fijos": -2.3283064365386963e-10,
+       "costos_variables": 0.030000000726431608,
+       "personal": 0.01000000536441803,
+       "costos": 0.030000000493600965,
+       "ebitda": -0.03000000584870577,
+       "estructura": 0.0,
+       "ebitda_final": -0.03000000584870577
+      },
+      "Generico AA&BB Casino": {
+       "ingresos": 0.0,
+       "costos_fijos": -0.10000000149011612,
+       "costos_variables": 3.725290298461914e-09,
+       "personal": 0.0299999937415123,
+       "costos": -0.09999999776482582,
+       "ebitda": 0.07000000402331352,
+       "estructura": 0.0,
+       "ebitda_final": 0.07000000402331352
+      },
+      "Generico AA&BB Complejo": {
+       "ingresos": 0.0,
+       "costos_fijos": -0.12999999755993485,
+       "costos_variables": 0.010000000707805157,
+       "personal": 0.0,
+       "costos": -0.1199999968521297,
+       "ebitda": 0.1199999968521297,
+       "estructura": 0.0,
+       "ebitda_final": 0.1199999968521297
+      },
+      "Hamelin": {
+       "ingresos": 118015543.08,
+       "costos_fijos": 8259591.59,
+       "costos_variables": 46932081.660000004,
+       "personal": 116080253.87,
+       "costos": 55191673.25,
+       "ebitda": -53256384.04000001,
+       "estructura": 0.0,
+       "ebitda_final": -53256384.04000001
+      },
+      "Jarana": {
+       "ingresos": 45539091.92,
+       "costos_fijos": 3001447.85,
+       "costos_variables": 14456648.809999999,
+       "personal": 29343104.770000003,
+       "costos": 17458096.66,
+       "ebitda": -1262109.5100000016,
+       "estructura": 0.0,
+       "ebitda_final": -1262109.5100000016
+      },
+      "Remember": {
+       "ingresos": 133933478.82000001,
+       "costos_fijos": 9262278.22,
+       "costos_variables": 48956136.4,
+       "personal": 144139924.80999997,
+       "costos": 58218414.62,
+       "ebitda": -68424860.60999995,
+       "estructura": 0.0,
+       "ebitda_final": -68424860.60999995
+      },
+      "Site Vip": {
+       "ingresos": 31972732.82,
+       "costos_fijos": 1547207.7100000004,
+       "costos_variables": 8846418.31,
+       "personal": 31276858.11,
+       "costos": 10393626.020000001,
+       "ebitda": -9697751.310000002,
+       "estructura": 0.0,
+       "ebitda_final": -9697751.310000002
+      },
+      "Vip Slot": {
+       "ingresos": 59470891.36,
+       "costos_fijos": 3211954.5299999993,
+       "costos_variables": 17268402.17,
+       "personal": 45440284.08000001,
+       "costos": 20480356.700000003,
+       "ebitda": -6449749.420000017,
+       "estructura": 0.0,
+       "ebitda_final": -6449749.420000017
+      }
+     },
+     "total": {
+      "ingresos": 449072236.39,
+      "costos_fijos": 29797017.57,
+      "costos_variables": 161672860.3,
+      "personal": 403022840.2,
+      "costos": 191469877.87,
+      "ebitda": -145420481.67999998,
+      "estructura": 0.0,
+      "ebitda_final": -145420481.67999998
+     }
+    },
+    "Casino": {
+     "subunidades": {
+      "Bingo": {
+       "ingresos": 9011250.0,
+       "costos_fijos": 3080779.05,
+       "costos_variables": 8807991.559999999,
+       "personal": 4221580.45,
+       "costos": 11888770.61,
+       "ebitda": -7099101.06,
+       "estructura": 479607.53727230243,
+       "ebitda_final": -7578708.597272302
+      },
+      "Mesas": {
+       "ingresos": 2337459519.47,
+       "costos_fijos": 119287943.935026,
+       "costos_variables": 846782938.207861,
+       "personal": 1205566925.5764177,
+       "costos": 966070882.142887,
+       "ebitda": 165821711.750695,
+       "estructura": 124407069.34184559,
+       "ebitda_final": 41414642.4088494
+      },
+      "Poker": {
+       "ingresos": 34780787.5,
+       "costos_fijos": 12141034.129999999,
+       "costos_variables": 9831827.169999998,
+       "personal": 14129498.6,
+       "costos": 21972861.299999997,
+       "ebitda": -1321572.3999999966,
+       "estructura": 1851144.7176880324,
+       "ebitda_final": -3172717.117688029
+      },
+      "Slots": {
+       "ingresos": 8589614332.86,
+       "costos_fijos": 859523709.0849742,
+       "costos_variables": 3950548730.812139,
+       "personal": 2552454827.8235826,
+       "costos": 4810072439.897113,
+       "ebitda": 1227087065.1393042,
+       "estructura": 457166738.9431939,
+       "ebitda_final": 769920326.1961102
+      }
+     },
+     "total": {
+      "ingresos": 10970865889.83,
+      "costos_fijos": 994033466.2000002,
+      "costos_variables": 4815971487.75,
+      "personal": 3776372832.4500003,
+      "costos": 5810004953.95,
+      "ebitda": 1384488103.429999,
+      "estructura": 583904560.5399998,
+      "ebitda_final": 800583542.8899993
+     }
+    },
+    "Casino Online": {
+     "subunidades": {
+      "Casino Online y Deportivas": {
+       "ingresos": 7613020318.5,
+       "costos_fijos": 586071774.39,
+       "costos_variables": 5373214086.87,
+       "personal": 241014739.04,
+       "costos": 5959285861.26,
+       "ebitda": 1412719718.1999998,
+       "estructura": 0.0,
+       "ebitda_final": 1412719718.1999998
+      },
+      "Poker Online": {
+       "ingresos": 114774192.96999998,
+       "costos_fijos": 5719782.470000001,
+       "costos_variables": 81178619.68,
+       "personal": 24037561.62,
+       "costos": 86898402.15,
+       "ebitda": 3838229.199999977,
+       "estructura": 0.0,
+       "ebitda_final": 3838229.199999977
+      }
+     },
+     "total": {
+      "ingresos": 7727794511.47,
+      "costos_fijos": 591791556.86,
+      "costos_variables": 5454392706.55,
+      "personal": 265052300.66,
+      "costos": 6046184263.41,
+      "ebitda": 1416557947.3999999,
+      "estructura": 0.0,
+      "ebitda_final": 1416557947.3999999
+     }
+    },
+    "Hotel": {
+     "subunidades": {
+      "AA&BB Hotel": {
+       "ingresos": 88219633.66999999,
+       "costos_fijos": 15076044.760000004,
+       "costos_variables": 32559425.32,
+       "personal": 25365130.259999987,
+       "costos": 47635470.080000006,
+       "ebitda": 15219033.329999994,
+       "estructura": 0.0,
+       "ebitda_final": 15219033.329999994
+      },
+      "Alojamiento": {
+       "ingresos": 429011412.21000004,
+       "costos_fijos": 104255458.68,
+       "costos_variables": 85339971.52000001,
+       "personal": 257230752.33000004,
+       "costos": 189595430.20000002,
+       "ebitda": -17814770.320000023,
+       "estructura": 0.0,
+       "ebitda_final": -17814770.320000023
+      },
+      "Salones": {
+       "ingresos": 510834060.6399999,
+       "costos_fijos": 28814995.160000004,
+       "costos_variables": 140328358.93,
+       "personal": 174926938.03000003,
+       "costos": 169143354.09,
+       "ebitda": 166763768.51999992,
+       "estructura": 0.0,
+       "ebitda_final": 166763768.51999992
+      }
+     },
+     "total": {
+      "ingresos": 1028065106.52,
+      "costos_fijos": 148146498.60000002,
+      "costos_variables": 258227755.77,
+      "personal": 457522820.62000006,
+      "costos": 406374254.37,
+      "ebitda": 164168031.52999988,
+      "estructura": 0.0,
+      "ebitda_final": 164168031.52999988
+     }
+    },
+    "Otros Negocios": {
+     "subunidades": {
+      "Alquiler de Locales": {
+       "ingresos": 29361834.19,
+       "costos_fijos": 13903039.920000002,
+       "costos_variables": 1593751.2699999998,
+       "personal": 0.0,
+       "costos": 15496791.190000001,
+       "ebitda": 13865043.0,
+       "estructura": 0.0,
+       "ebitda_final": 13865043.0
+      },
+      "Shows": {
+       "ingresos": 0.0,
+       "costos_fijos": 0.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 0.0,
+       "ebitda": 0.0,
+       "estructura": 0.0,
+       "ebitda_final": 0.0
+      }
+     },
+     "total": {
+      "ingresos": 29361834.19,
+      "costos_fijos": 13903039.920000002,
+      "costos_variables": 1593751.2699999998,
+      "personal": 0.0,
+      "costos": 15496791.190000001,
+      "ebitda": 13865043.0,
+      "estructura": 0.0,
+      "ebitda_final": 13865043.0
+     }
+    },
+    "Parking": {
+     "subunidades": {
+      "Cubierto": {
+       "ingresos": 120631872.22,
+       "costos_fijos": 1054500.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 1054500.0,
+       "ebitda": 119577372.22,
+       "estructura": 0.0,
+       "ebitda_final": 119577372.22
+      },
+      "Descubierto": {
+       "ingresos": 70456296.82,
+       "costos_fijos": 300000.0,
+       "costos_variables": 0.0,
+       "personal": 0.0,
+       "costos": 300000.0,
+       "ebitda": 70156296.82,
+       "estructura": 0.0,
+       "ebitda_final": 70156296.82
+      },
+      "Generico": {
+       "ingresos": 26053341.27,
+       "costos_fijos": 107075281.80000001,
+       "costos_variables": 15062733.620000001,
+       "personal": 41922894.79,
+       "costos": 122138015.42000002,
+       "ebitda": -138007568.94000003,
+       "estructura": 0.0,
+       "ebitda_final": -138007568.94000003
+      }
+     },
+     "total": {
+      "ingresos": 217141510.31,
+      "costos_fijos": 108429781.80000001,
+      "costos_variables": 15062733.620000001,
+      "personal": 41922894.79,
+      "costos": 123492515.42000002,
+      "ebitda": 51726100.099999964,
+      "estructura": 0.0,
+      "ebitda_final": 51726100.099999964
+     }
+    }
+   }
+  }
+ }
+}

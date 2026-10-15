@@ -1,0 +1,366 @@
+{
+ "01000": {
+  "unidad": "Casino",
+  "subunidad": "(Genérico a repartir)",
+  "detalle": "CASINO GENERICO",
+  "rol": "generico_casino",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01100": {
+  "unidad": "Casino",
+  "subunidad": "Mesas",
+  "detalle": "CASINO MESAS",
+  "rol": "directo",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01200": {
+  "unidad": "Casino",
+  "subunidad": "Slots",
+  "detalle": "CASINO MAQ",
+  "rol": "directo",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01300": {
+  "unidad": "Casino",
+  "subunidad": "Poker",
+  "detalle": "CASINO TORNEO POKER",
+  "rol": "directo",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01301": {
+  "unidad": "Casino",
+  "subunidad": "Poker",
+  "detalle": "CAP",
+  "rol": "directo",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01400": {
+  "unidad": "Casino",
+  "subunidad": "Bingo",
+  "detalle": "CASINO BINGO",
+  "rol": "directo",
+  "ceco_original": "CASINO FÍSICO"
+ },
+ "01001": {
+  "unidad": "Casino Online",
+  "subunidad": "Casino Online y Deportivas",
+  "detalle": "CASINO ONLINE",
+  "rol": "directo",
+  "ceco_original": "CASINO ONLINE"
+ },
+ "01002": {
+  "unidad": "Casino Online",
+  "subunidad": "Casino Online y Deportivas",
+  "detalle": "DEPORTIVAS",
+  "rol": "directo",
+  "ceco_original": "CASINO ONLINE"
+ },
+ "02300": {
+  "unidad": "Casino Online",
+  "subunidad": "Poker Online",
+  "detalle": "POKER ONLINE",
+  "rol": "directo",
+  "ceco_original": "POKER ONLINE"
+ },
+ "20000": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "HOTEL GENERICO",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20100": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "HOSPEDAJE",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20400": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "MOI SPA - FITNESS",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20501": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "OTROS SERVICIOS",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20502": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "LAVANDERIA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20503": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "TELEFONIA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20504": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "OTROS",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20505": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "PARKING",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20200": {
+  "unidad": "Hotel",
+  "subunidad": "AA&BB Hotel",
+  "detalle": "GENERICO AA&BB HOTEL",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20203": {
+  "unidad": "Hotel",
+  "subunidad": "Alojamiento",
+  "detalle": "DESAYUNO",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20204": {
+  "unidad": "Hotel",
+  "subunidad": "AA&BB Hotel",
+  "detalle": "ALL DAY",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20205": {
+  "unidad": "Hotel",
+  "subunidad": "AA&BB Hotel",
+  "detalle": "POOL BAR",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20206": {
+  "unidad": "Hotel",
+  "subunidad": "AA&BB Hotel",
+  "detalle": "ROOM SERVICE",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "50000": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "GENERICO GRAN PARANA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "50101": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "ALQ SALONES GRAN PARANA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "50102": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "AA&BB BANQUETES GRAN PARANA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "50103": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "AA&BB COFFEE GRAN PARANA",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20207": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "AA&BB COFFEE SALAS HOTEL",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20301": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "AA&BB BANQUETES SALAS HOTEL",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20302": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "ALQUILER SALAS HOTEL",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "20303": {
+  "unidad": "Hotel",
+  "subunidad": "Salones",
+  "detalle": "SERVICIOS SALAS HOTEL",
+  "rol": "directo",
+  "ceco_original": "HOTEL"
+ },
+ "30000": {
+  "unidad": "AA&BB",
+  "subunidad": "Generico AA&BB Casino",
+  "detalle": "GENERICO AA&BB CASINO",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30101": {
+  "unidad": "AA&BB",
+  "subunidad": "360 Express",
+  "detalle": "360 EXPRESS",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30102": {
+  "unidad": "AA&BB",
+  "subunidad": "City Rock",
+  "detalle": "CITY ROCK",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30104": {
+  "unidad": "AA&BB",
+  "subunidad": "Jarana",
+  "detalle": "JARANA",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30105": {
+  "unidad": "AA&BB",
+  "subunidad": "Hamelin",
+  "detalle": "HAMELIN",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30106": {
+  "unidad": "AA&BB",
+  "subunidad": "Remember",
+  "detalle": "REMEMBER",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30107": {
+  "unidad": "AA&BB",
+  "subunidad": "Circus",
+  "detalle": "CIRCUS",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30109": {
+  "unidad": "AA&BB",
+  "subunidad": "Vip Slot",
+  "detalle": "VIP SLOT",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30111": {
+  "unidad": "AA&BB",
+  "subunidad": "Site Vip",
+  "detalle": "SITE VIP",
+  "rol": "directo",
+  "ceco_original": "AA&BB CASINO"
+ },
+ "30113": {
+  "unidad": "AA&BB",
+  "subunidad": "Comedor Personal",
+  "detalle": "COMEDOR PERSONAL",
+  "rol": "directo",
+  "ceco_original": "COMEDOR PERSONAL"
+ },
+ "30001": {
+  "unidad": "AA&BB",
+  "subunidad": "Generico AA&BB Complejo",
+  "detalle": "GENERICO AA&BB COMPLEJO",
+  "rol": "directo",
+  "ceco_original": "AA&BB COMPLEJO"
+ },
+ "30002": {
+  "unidad": "AA&BB",
+  "subunidad": "Generico Sector Turismo",
+  "detalle": "GENERICO SECTOR TURISMO",
+  "rol": "directo",
+  "ceco_original": "GENERICO TURISMO"
+ },
+ "40000": {
+  "unidad": "Parking",
+  "subunidad": "Generico",
+  "detalle": "GENERICO",
+  "rol": "directo",
+  "ceco_original": "PARKING"
+ },
+ "40100": {
+  "unidad": "Parking",
+  "subunidad": "Cubierto",
+  "detalle": "CUBIERTO",
+  "rol": "directo",
+  "ceco_original": "PARKING"
+ },
+ "40200": {
+  "unidad": "Parking",
+  "subunidad": "Descubierto",
+  "detalle": "DESCUBIERTO",
+  "rol": "directo",
+  "ceco_original": "PARKING"
+ },
+ "60000": {
+  "unidad": "Otros Negocios",
+  "subunidad": "Shows",
+  "detalle": "GENERICO",
+  "rol": "directo",
+  "ceco_original": "SHOWS"
+ },
+ "61000": {
+  "unidad": "Disco",
+  "subunidad": "Generico",
+  "detalle": "GENERICO",
+  "rol": "excluido",
+  "ceco_original": "DISCO"
+ },
+ "61100": {
+  "unidad": "Disco",
+  "subunidad": "Decada",
+  "detalle": "DECADA",
+  "rol": "excluido",
+  "ceco_original": "DISCO"
+ },
+ "80000": {
+  "unidad": "Sin asignar",
+  "subunidad": "Generico",
+  "detalle": "GENERICO",
+  "rol": "sin_asignar",
+  "ceco_original": "OTROS TURISMO"
+ },
+ "80100": {
+  "unidad": "Otros Negocios",
+  "subunidad": "Alquiler de Locales",
+  "detalle": "ALQUILER LOCALES",
+  "rol": "directo",
+  "ceco_original": "ALQUILER LOCALES"
+ },
+ "90000": {
+  "unidad": "Estructura",
+  "subunidad": "Generico",
+  "detalle": "GENERICO",
+  "rol": "estructura",
+  "ceco_original": "ESTRUCTURA"
+ },
+ "90001": {
+  "unidad": "Estructura",
+  "subunidad": "Corporativa",
+  "detalle": "CORPORATIVA",
+  "rol": "estructura",
+  "ceco_original": "ESTRUCTURA"
+ }
+}

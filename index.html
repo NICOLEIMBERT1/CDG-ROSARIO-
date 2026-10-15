@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Resultados Económicos – City Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a1020; --panel:#0f1830; --panel-2:#121d3a; --line:#1b2a4f;
+    --txt:#e8edf8; --muted:#7d8bb0; --accent:#f2731a;
+    --pos:#22c55e; --neg:#ef4444;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-padding-top:12px}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  button,select{font:inherit;color:inherit}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  header{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;
+    padding:22px 32px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.01em}
+  .sub{margin:4px 0 0;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .filters{display:flex;flex-wrap:wrap;gap:10px}
+  .f{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);
+    border-radius:8px;padding:8px 12px;font-size:13px}
+  .f label{color:var(--muted);font-size:12px}
+  .f select{background:transparent;border:0;font-weight:600;cursor:pointer;padding:2px 4px}
+  .f select option{background:var(--panel);color:var(--txt)}
+  .f .fixed{font-weight:600}
+
+  nav{display:flex;gap:4px;padding:14px 32px 0;border-bottom:1px solid var(--line);overflow-x:auto}
+  nav button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 16px;cursor:pointer;
+    color:var(--muted);font-weight:500;font-size:14px;white-space:nowrap}
+  nav button:hover{color:var(--txt)}
+  nav button[aria-selected="true"]{color:var(--txt);border-bottom-color:var(--accent);font-weight:600}
+
+  main{padding:24px 32px 40px}
+  .avisos{display:grid;gap:8px;margin-bottom:18px}
+  .aviso{border:1px solid #6b3a12;background:#24160a;color:#f5c89b;border-radius:8px;padding:10px 14px;font-size:13px}
+
+  .grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:18px;overflow-x:auto;padding-bottom:8px}
+  .col{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--accent);
+    border-radius:10px;display:flex;flex-direction:column;min-width:0}
+  .col-h{padding:16px 16px 14px;text-align:center;border-bottom:1px solid var(--line)}
+  .col-h h2{margin:0;font-size:17px;font-weight:700;color:var(--accent)}
+  .col-h p{margin:4px 0 0;font-size:11px;color:var(--muted);min-height:14px}
+  .blk{padding:18px 16px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;flex:1}
+  .blk:last-child{border-bottom:0}
+  .lbl{text-align:center;font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  .num{text-align:center;font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:-.02em;line-height:1.1}
+  .num small{font-size:.62em;font-weight:700}
+  .num.pos{color:var(--pos)} .num.neg{color:var(--neg)}
+  .det{display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-family:var(--mono);font-size:12px;margin-top:4px}
+  .det .k{color:var(--muted);font-weight:700}
+  .det .v{text-align:right;font-weight:700}
+  .v.pos{color:var(--pos)} .v.neg{color:var(--neg)} .v.nd{color:#41507a}
+  .chip{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:11px;
+    background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:5px 9px;color:var(--muted)}
+  .chip b{color:var(--txt)}
+  .final{text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .final b{font-size:13px}
+
+  .estado{padding:60px 20px;text-align:center;color:var(--muted)}
+  .estado strong{display:block;color:var(--txt);font-size:16px;margin-bottom:6px}
+  footer{padding:0 32px 32px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+
+  @media (max-width:640px){
+    header,nav,main{padding-left:16px;padding-right:16px}
+    footer{padding:0 16px 28px}
+    .num{font-size:26px}
+    .grid{grid-auto-columns:minmax(240px,86%)}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Resultados Económicos – City Center</h1>
+    <p class="sub" id="sub">City Center Rosario</p>
+  </div>
+  <div class="filters" id="filtros" hidden>
+    <div class="f"><label for="desde">Período</label>
+      <select id="desde" aria-label="Mes inicial"></select>
+      <span aria-hidden="true">–</span>
+      <select id="hasta" aria-label="Mes final"></select></div>
+    <div class="f"><label for="anio">Año</label><select id="anio"></select></div>
+    <div class="f"><span class="fixed">Real</span></div>
+  </div>
+</header>
+<nav id="tabs" role="tablist" aria-label="Unidades de negocio" hidden></nav>
+<main>
+  <div class="avisos" id="avisos"></div>
+  <div id="contenido"><div class="estado">Cargando datos…</div></div>
+</main>
+<footer id="pie"></footer>
+
+<script>
+const MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const ORDEN=['Casino','Casino Online','Hotel','AA&BB','Parking','Otros Negocios'];
+const CAMPOS=['ingresos','costos_fijos','costos_variables','personal','costos','ebitda','estructura','ebitda_final'];
+const S={anio:null,desde:1,hasta:12,tab:'Resumen'};
+let D=null;
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clave=(a,m)=>`${a}-${String(m).padStart(2,'0')}`;
+const vacio=()=>Object.fromEntries(CAMPOS.map(c=>[c,0]));
+const sumar=(a,b)=>{for(const c of CAMPOS)a[c]+=(b&&b[c])||0;return a};
+
+/* ---------- formato ---------- */
+function fM(v){const m=v/1e6,d=Math.abs(m)>=10?0:1;
+  return m.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d})+' M'}
+const fP=v=>v.toLocaleString('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+const signo=(t,v)=>(v>0?'+':'')+t;
+
+/* ---------- datos ---------- */
+const mesesDe=(fuente,anio)=>Object.keys(fuente||{}).filter(k=>k.startsWith(anio+'-')).map(k=>+k.slice(5)).sort((a,b)=>a-b);
+const anios=()=>[...new Set(Object.keys(D.meses).map(k=>+k.slice(0,4)))].sort((a,b)=>b-a);
+
+function agregar(col,fuente,anio,ms){
+  const acc=vacio();
+  for(const m of ms){
+    const r=fuente&&fuente[clave(anio,m)]&&fuente[clave(anio,m)].resultado;
+    if(!r)return null;               // comparativo incompleto: no se muestra
+    sumar(acc,col.get(r));
+  }
+  return acc;
+}
+function unidadesPresentes(){
+  const set=new Set();
+  for(const m of mesesDe(D.meses,S.anio))Object.keys(D.meses[clave(S.anio,m)].resultado).forEach(u=>set.add(u));
+  return ORDEN.filter(u=>set.has(u)).concat([...set].filter(u=>!ORDEN.includes(u)));
+}
+function columnas(){
+  const pres=unidadesPresentes();
+  if(S.tab==='Resumen'){
+    const cols=[{titulo:'Total unidades',sub:'Suma de las unidades de negocio',total:true,
+      get:r=>{const a=vacio();for(const u of Object.keys(r))sumar(a,r[u].total);return a}}];
+    for(const u of pres)cols.push({titulo:u==='Casino'?'Casino Total':u,sub:u==='Casino'?'Slots, Mesas, Poker y Bingo':'',get:r=>r[u]&&r[u].total});
+    return {cols,base:cols[0]};
+  }
+  const subs=new Set();
+  for(const m of mesesDe(D.meses,S.anio)){
+    const u=D.meses[clave(S.anio,m)].resultado[S.tab];
+    if(u)Object.keys(u.subunidades).forEach(s=>subs.add(s));
+  }
+  const orden=S.tab==='Casino'?['Slots','Mesas','Poker','Bingo']:[...subs].sort();
+  const total={titulo:S.tab==='Casino'?'Casino Total':S.tab+' – Total',sub:S.tab==='Casino'?'Slots, Mesas, Poker y Bingo':'',total:true,get:r=>r[S.tab]&&r[S.tab].total};
+  const cols=[total];
+  for(const s of orden.filter(x=>subs.has(x)))cols.push({titulo:s,sub:'',get:r=>r[S.tab]&&r[S.tab].subunidades[s]});
+  return {cols,base:total};
+}
+
+/* ---------- comparativos ---------- */
+const pct=(a,b)=>b?((a-b)/Math.abs(b))*100:null;
+const marg=x=>x.ingresos?x.ebitda/x.ingresos*100:null;
+function fila(k,txt,clase){return `<span class="k">${k}</span><span class="v ${clase||''}">${txt}</span>`}
+function dPct(a,b,malo){            // variación % ; malo=true: subir es malo (costos)
+  if(!b)return '<span class="v nd">—</span>';
+  const p=pct(a,b); if(p===null)return '—';
+  const bueno=malo?p<0:p>0; const c=Math.abs(p)<.05?'':(bueno?'pos':'neg');
+  return `<span class="v ${c}">${signo(fP(p),p)}</span>`;
+}
+function cmp(etq,a,b,campo,malo){
+  const v=(!b)?'<span class="v nd">—</span>':dPct(a[campo],b[campo],malo);
+  return `<span class="k">${etq}</span>${v}`;
+}
+function cmpPP(etq,a,b){
+  if(!b||marg(b)===null||marg(a)===null)return `<span class="k">${etq}</span><span class="v nd">—</span>`;
+  const d=marg(a)-marg(b),c=Math.abs(d)<.05?'':(d>0?'pos':'neg');
+  return `<span class="k">${etq}</span><span class="v ${c}">${signo(d.toLocaleString('es-AR',{minimumFractionDigits:1,maximumFractionDigits:1}),d)} pp</span>`;
+}
+
+/* ---------- render ---------- */
+function render(){
+  const ms=mesesDe(D.meses,S.anio).filter(m=>m>=S.desde&&m<=S.hasta);
+  const cont=$('contenido');
+  if(!ms.length){cont.innerHTML='<div class="estado"><strong>Sin datos en el período</strong>Elegí otro rango de meses.</div>';avisos([]);return}
+  const {cols,base}=columnas();
+  const baseAct=agregar(base,D.meses,S.anio,ms);
+  const html=cols.map(col=>{
+    const a=agregar(col,D.meses,S.anio,ms)||vacio();
+    const py=agregar(col,D.meses,S.anio-1,ms);           // mismo período del año anterior
+    const fc=agregar(col,D.forecast,S.anio,ms);          // forecast, si fue cargado
+    const sh=(!col.total&&baseAct&&baseAct.ingresos)?a.ingresos/baseAct.ingresos*100:null;
+    const m=marg(a), mFinal=a.ingresos?a.ebitda_final/a.ingresos*100:null;
+    const ing=`<div class="blk"><div class="lbl">Ingresos</div><div class="num">${fM(a.ingresos).replace(' M','<small> M</small>')}</div>
+      <div class="det">${cmp('vs Fc',a,fc,'ingresos',false)}${cmp('vs '+String(S.anio-1).slice(2),a,py,'ingresos',false)}
+      ${sh===null?'':`<span class="k">%Tot</span><span class="v">${fP(sh)}</span>`}</div></div>`;
+    const bloque=(tit,campo)=>`<div class="blk"><div class="lbl">${tit}</div><div class="num">${fM(a[campo]).replace(' M','<small> M</small>')}</div>
+      <div class="det">${cmp('vs Fc',a,fc,campo,true)}${cmp('vs '+String(S.anio-1).slice(2),a,py,campo,true)}
+      <span class="k">%Ing</span><span class="v">${a.ingresos?fP(a[campo]/a.ingresos*100):'—'}</span></div></div>`;
+    const cls=a.ebitda>0?'pos':(a.ebitda<0?'neg':'');
+    const est=Math.abs(a.estructura)>0.5;
+    const ebitda=`<div class="blk"><div class="lbl">EBITDA</div><div class="num ${cls}">${fM(a.ebitda).replace(' M','<small> M</small>')}</div>
+      ${est?`<div class="chip"><span>Estructura</span><b>−${fM(a.estructura)}</b></div>
+      <div class="final">EBITDA final <b>${fM(a.ebitda_final)}</b> (${mFinal===null?'—':fP(mFinal)})</div>`:''}
+      <div class="det">${cmpPP('vs Fc',a,fc)}${cmpPP('vs '+String(S.anio-1).slice(2),a,py)}
+      <span class="k">Margen</span><span class="v ${m===null?'':(m>=0?'pos':'neg')}">${m===null?'—':fP(m)}</span></div></div>`;
+    return `<section class="col"><div class="col-h"><h2>${esc(col.titulo)}</h2><p>${esc(col.sub||'')}</p></div>
+      ${ing}${bloque('Costos fijos y variables','costos')}${bloque('Gasto de personal','personal')}${ebitda}</section>`;
+  }).join('');
+  cont.innerHTML=`<div class="grid">${html}</div>`;
+  avisos(ms);
+}
+
+function avisos(ms){
+  const out=[];let lin=0,res=0,cecos=new Set(),nomap=0,adv=[];
+  for(const m of ms){
+    const c=(D.meses[clave(S.anio,m)]||{}).controles;if(!c)continue;
+    if(c.sin_asignar&&c.sin_asignar.lineas){lin+=c.sin_asignar.lineas;res+=c.sin_asignar.resultado;c.sin_asignar.ceco.forEach(x=>cecos.add(x))}
+    if(c.cuentas_sin_mapeo)nomap+=c.cuentas_sin_mapeo.lineas;
+    if(c.conciliacion&&Math.abs(c.conciliacion.diferencia)>1)adv.push(MESES[m-1]);
+  }
+  if(lin)out.push(`Centros sin unidad asignada (${[...cecos].join(', ')}): ${fM(res)} de resultado no está incluido en las unidades.`);
+  if(nomap)out.push(`${nomap} asientos con cuentas sin mapear quedaron fuera del resultado.`);
+  if(adv.length)out.push(`La conciliación no cierra en: ${adv.join(', ')}.`);
+  $('avisos').innerHTML=out.map(t=>`<div class="aviso">${esc(t)}</div>`).join('');
+}
+
+/* ---------- controles de interfaz ---------- */
+function llenarMeses(){
+  const ms=mesesDe(D.meses,S.anio);
+  if(!ms.includes(S.desde)||!ms.includes(S.hasta)){S.desde=ms[0];S.hasta=ms[ms.length-1]}
+  const op=ms.map(m=>`<option value="${m}">${MESES[m-1]}</option>`).join('');
+  $('desde').innerHTML=op;$('hasta').innerHTML=op;
+  $('desde').value=S.desde;$('hasta').value=S.hasta;
+}
+function tabs(){
+  const lista=['Resumen',...unidadesPresentes()];
+  if(!lista.includes(S.tab))S.tab='Resumen';
+  $('tabs').innerHTML=lista.map(t=>`<button role="tab" aria-selected="${t===S.tab}" data-t="${esc(t)}">${esc(t)}</button>`).join('');
+}
+
+function iniciar(){
+  const ys=anios();
+  S.anio=ys[0];
+  $('anio').innerHTML=ys.map(y=>`<option>${y}</option>`).join('');
+  $('anio').value=S.anio;
+  llenarMeses();tabs();
+  $('filtros').hidden=false;$('tabs').hidden=false;
+  $('sub').textContent='City Center Rosario · '+S.anio;
+  const ult=Object.keys(D.meses).sort().pop();
+  const f=D.meta&&D.meta.actualizado?new Date(D.meta.actualizado).toLocaleString('es-AR',{dateStyle:'short',timeStyle:'short'}):'';
+  $('pie').textContent=`Importes en millones de pesos (ARS). Último mes cargado: ${MESES[+ult.slice(5)-1]} ${ult.slice(0,4)}${f?' · Actualizado '+f:''}`;
+  render();
+}
+
+$('anio').addEventListener('change',e=>{S.anio=+e.target.value;$('sub').textContent='City Center Rosario · '+S.anio;llenarMeses();tabs();render()});
+$('desde').addEventListener('change',e=>{S.desde=+e.target.value;if(S.hasta<S.desde){S.hasta=S.desde;$('hasta').value=S.hasta}render()});
+$('hasta').addEventListener('change',e=>{S.hasta=+e.target.value;if(S.desde>S.hasta){S.desde=S.hasta;$('desde').value=S.desde}render()});
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;S.tab=b.dataset.t;tabs();render()});
+
+fetch('data/acumulado.json?v='+Date.now(),{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+  .then(j=>{D=j;if(!D.meses||!Object.keys(D.meses).length)throw new Error('vacío');iniciar()})
+  .catch(()=>{$('contenido').innerHTML='<div class="estado"><strong>No hay datos para mostrar</strong>Falta el archivo <code>public/data/acumulado.json</code> o está vacío. Procesá una bajada con <code>procesar_mes.py</code> y volvé a publicar.</div>'});
+</script>
+</body>
+</html>

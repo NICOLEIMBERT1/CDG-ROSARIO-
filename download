@@ -1,0 +1,8 @@
+# Bajadas contables y matrices originales: NO subir al repo
+*.xlsx
+*.XLSX
+*.xls
+bajadas/
+# Python
+__pycache__/
+*.pyc
