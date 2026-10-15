@@ -2,7 +2,7 @@
  "meta": {
   "moneda": "ARS",
   "criterio_signos": "ingresos y costos positivos",
-  "actualizado": "2026-10-15T15:52:34",
+  "actualizado": "2026-10-15T18:28:59",
   "formato": 2,
   "gerencias": {
    "N": "Operaciones / Juego Tradicional",
@@ -28,16 +28,6 @@
    "resultado": {
     "AA&BB": {
      "subunidades": {
-      "(Centros 3xxxx no listados)": {
-       "ingresos": 0.0,
-       "costos_fijos": 0.0,
-       "costos_variables": 0.0,
-       "personal": 0.0,
-       "costos": 0.0,
-       "ebitda": 0.0,
-       "estructura": 0.0,
-       "ebitda_final": 0.0
-      },
       "360 Express": {
        "ingresos": 42960248.34,
        "costos_fijos": 2599259.4699999997,
@@ -99,14 +89,14 @@
        "ebitda_final": -15167523.620000005
       },
       "Jarana": {
-       "ingresos": 46978452.220000006,
-       "costos_fijos": 2834800.3199999994,
-       "costos_variables": 11865729.510000002,
+       "ingresos": 46978452.22,
+       "costos_fijos": 2834800.3200000003,
+       "costos_variables": 11865729.509999998,
        "personal": 18421382.970000003,
-       "costos": 14700529.830000002,
-       "ebitda": 13856539.420000002,
+       "costos": 14700529.829999998,
+       "ebitda": 13856539.419999998,
        "estructura": 0.0,
-       "ebitda_final": 13856539.420000002
+       "ebitda_final": 13856539.419999998
       },
       "Remember": {
        "ingresos": 116837112.58999999,
@@ -145,9 +135,9 @@
       "costos_variables": 128296788.55,
       "personal": 310713227.83000004,
       "costos": 157859367.52,
-      "ebitda": -32599576.590000015,
+      "ebitda": -32599576.59000002,
       "estructura": 0.0,
-      "ebitda_final": -32599576.590000015
+      "ebitda_final": -32599576.59000002
      }
     },
     "Casino": {
@@ -284,15 +274,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 26752401.39,
-       "costos_fijos": 2870026.7100000028,
-       "costos_variables": 1511510.6,
+       "costos_fijos": 24880138.509999998,
+       "costos_variables": 1693847.9800000002,
        "personal": 0.0,
-       "costos": 4381537.310000002,
-       "ebitda": 22370864.08,
+       "costos": 26573986.49,
+       "ebitda": 178414.90000000224,
        "estructura": 0.0,
-       "ebitda_final": 22370864.08
+       "ebitda_final": 178414.90000000224
       },
       "Shows": {
        "ingresos": 0.0,
@@ -307,13 +297,13 @@
      },
      "total": {
       "ingresos": 26752401.39,
-      "costos_fijos": 2870026.7100000028,
-      "costos_variables": 1511510.6,
+      "costos_fijos": 24880138.509999998,
+      "costos_variables": 1693847.9800000002,
       "personal": 0.0,
-      "costos": 4381537.310000002,
-      "ebitda": 22370864.08,
+      "costos": 26573986.49,
+      "ebitda": 178414.90000000224,
       "estructura": 0.0,
-      "ebitda_final": 22370864.08
+      "ebitda_final": 178414.90000000224
      }
     },
     "Parking": {
@@ -362,10 +352,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "Centros 3xxxx no listados en la matriz, asignados a AA&BB: ['30114']",
-     "98 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": -2.3283064365386963e-10,
      "costos_fijos": -0.09999990463256836,
@@ -388,11 +375,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 98,
-     "resultado": -22192449.179999996,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -401,7 +386,7 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 2068696051.7400022,
-     "resultado_unidades": 2090888500.9199996,
+     "resultado_unidades": 2068696051.7399995,
      "diferencia": 2.6226043701171875e-06
     },
     "totales_por_ledger": {
@@ -2755,23 +2740,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      2388489
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9427945
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1511511
+      1693848
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1528437
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "REPARACION",
+      "REPARACION",
+      1843921
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      2870027
+      6901659
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      2789687
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -2984,7 +3009,7 @@
       ],
       "Otros Negocios": [
        0,
-       1511511
+       11255595
       ],
       "Parking": [
        78250,
@@ -2993,10 +3018,6 @@
       "Estructura": [
        0,
        102095098
-      ],
-      "Sin asignar": [
-       0,
-       9744084
       ]
      },
      "E": {
@@ -3078,6 +3099,10 @@
        74601,
        6527816
       ],
+      "Otros Negocios": [
+       0,
+       2228689
+      ],
       "Parking": [
        18068,
        4766611
@@ -3085,10 +3110,6 @@
       "Estructura": [
        0,
        85577674
-      ],
-      "Sin asignar": [
-       0,
-       2228689
       ]
      },
      "J": {
@@ -3126,6 +3147,10 @@
        0,
        5921
       ],
+      "Otros Negocios": [
+       0,
+       2791268
+      ],
       "Parking": [
        7766981,
        11463913
@@ -3133,10 +3158,6 @@
       "Estructura": [
        0,
        4368083
-      ],
-      "Sin asignar": [
-       0,
-       2791268
       ]
      },
      "N": {
@@ -3182,7 +3203,7 @@
       ],
       "Otros Negocios": [
        0,
-       2870027
+       10298434
       ],
       "Parking": [
        3311075,
@@ -3191,10 +3212,6 @@
       "Estructura": [
        0,
        179887851
-      ],
-      "Sin asignar": [
-       0,
-       7428408
       ]
      },
      "R": {
@@ -3641,15 +3658,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 27528227.33,
-       "costos_fijos": 971585.5399999991,
-       "costos_variables": 1555344.85,
+       "costos_fijos": 24427528.270000003,
+       "costos_variables": 1725294.5,
        "personal": 0.0,
-       "costos": 2526930.389999999,
-       "ebitda": 25001296.939999998,
+       "costos": 26152822.770000003,
+       "ebitda": 1375404.559999995,
        "estructura": 0.0,
-       "ebitda_final": 25001296.939999998
+       "ebitda_final": 1375404.559999995
       },
       "Shows": {
        "ingresos": 0.0,
@@ -3664,13 +3681,13 @@
      },
      "total": {
       "ingresos": 27528227.33,
-      "costos_fijos": 971585.5399999996,
-      "costos_variables": 1555344.85,
+      "costos_fijos": 24427528.270000003,
+      "costos_variables": 1725294.5,
       "personal": 0.0,
-      "costos": 2526930.3899999997,
-      "ebitda": 25001296.939999998,
+      "costos": 26152822.770000003,
+      "ebitda": 1375404.5599999945,
       "estructura": 0.0,
-      "ebitda_final": 25001296.939999998
+      "ebitda_final": 1375404.5599999945
      }
     },
     "Parking": {
@@ -3720,8 +3737,7 @@
    },
    "controles": {
     "avisos": [
-     "Disco tiene 2 asientos; se excluyen del reporte.",
-     "77 asientos en centros sin unidad asignada: ['80000']"
+     "Disco tiene 2 asientos; se excluyen del reporte."
     ],
     "casino_generico": {
      "ingresos": 2.3283064365386963e-10,
@@ -3745,11 +3761,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 77,
-     "resultado": -23625892.380000003,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -3758,7 +3772,7 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 1686112095.5899968,
-     "resultado_unidades": 1709737987.9700005,
+     "resultado_unidades": 1686112095.5900004,
      "diferencia": -3.5762786865234375e-06
     },
     "totales_por_ledger": {
@@ -5976,23 +5990,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      2155342
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9427945
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1555345
+      1725294
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1375630
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "REPARACION",
+      "REPARACION",
+      2250006
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      971586
+      4902021
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      4316584
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -6197,7 +6251,7 @@
       ],
       "Otros Negocios": [
        0,
-       1555345
+       11324760
       ],
       "Parking": [
        54874,
@@ -6206,10 +6260,6 @@
       "Estructura": [
        0,
        129810233
-      ],
-      "Sin asignar": [
-       0,
-       9769416
       ]
      },
      "E": {
@@ -6221,6 +6271,10 @@
        0,
        308847
       ],
+      "Otros Negocios": [
+       0,
+       1848445
+      ],
       "Parking": [
        3603833,
        7593742
@@ -6228,10 +6282,6 @@
       "Estructura": [
        0,
        91899479
-      ],
-      "Sin asignar": [
-       0,
-       1848445
       ]
      },
      "F": {
@@ -6295,6 +6345,10 @@
        25021,
        5097247
       ],
+      "Otros Negocios": [
+       0,
+       2022815
+      ],
       "Parking": [
        6060,
        4326298
@@ -6302,10 +6356,6 @@
       "Estructura": [
        0,
        121993217
-      ],
-      "Sin asignar": [
-       0,
-       2022815
       ]
      },
      "J": {
@@ -6339,6 +6389,10 @@
        0,
        412388
       ],
+      "Otros Negocios": [
+       0,
+       2468139
+      ],
       "Parking": [
        8648162,
        10139554
@@ -6346,10 +6400,6 @@
       "Estructura": [
        0,
        3122573
-      ],
-      "Sin asignar": [
-       0,
-       2468139
       ]
      },
      "N": {
@@ -6391,7 +6441,7 @@
       ],
       "Otros Negocios": [
        0,
-       971586
+       8488443
       ],
       "Parking": [
        3638315,
@@ -6400,10 +6450,6 @@
       "Estructura": [
        0,
        78008983
-      ],
-      "Sin asignar": [
-       0,
-       7516858
       ]
      },
      "R": {
@@ -6423,6 +6469,10 @@
        92882,
        825
       ],
+      "Otros Negocios": [
+       0,
+       220
+      ],
       "Parking": [
        6657,
        471
@@ -6430,10 +6480,6 @@
       "Estructura": [
        0,
        41252166
-      ],
-      "Sin asignar": [
-       0,
-       220
       ]
      },
      "T": {
@@ -6860,15 +6906,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 24905610.45,
-       "costos_fijos": 7227978.4799999995,
-       "costos_variables": 1407167.18,
+       "costos_fijos": 34088804.22,
+       "costos_variables": 1595481.9,
        "personal": 0.0,
-       "costos": 8635145.66,
-       "ebitda": 16270464.79,
+       "costos": 35684286.12,
+       "ebitda": -10778675.669999998,
        "estructura": 0.0,
-       "ebitda_final": 16270464.79
+       "ebitda_final": -10778675.669999998
       },
       "Shows": {
        "ingresos": 0.0,
@@ -6883,13 +6929,13 @@
      },
      "total": {
       "ingresos": 24905610.45,
-      "costos_fijos": 7227978.4799999995,
-      "costos_variables": 1407167.1799999997,
+      "costos_fijos": 34088804.22,
+      "costos_variables": 1595481.9,
       "personal": 0.0,
-      "costos": 8635145.66,
-      "ebitda": 16270464.79,
+      "costos": 35684286.12,
+      "ebitda": -10778675.669999998,
       "estructura": 0.0,
-      "ebitda_final": 16270464.79
+      "ebitda_final": -10778675.669999998
      }
     },
     "Parking": {
@@ -6938,9 +6984,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "129 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": 0.0,
      "costos_fijos": 0.020000219345092773,
@@ -6963,11 +7007,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 129,
-     "resultado": -27049140.46,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -6976,7 +7018,7 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 2386190182.8699994,
-     "resultado_unidades": 2413239323.3300004,
+     "resultado_unidades": 2386190182.8700004,
      "diferencia": -9.5367431640625e-07
     },
     "totales_por_ledger": {
@@ -9266,23 +9308,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      1908184
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9427945
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1407167
+      1595482
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1988190
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "REPARACION",
+      "REPARACION",
+      2903557
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      7227978
+      12339673
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5521255
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -9483,7 +9565,7 @@
       ],
       "Otros Negocios": [
        0,
-       1407167
+       11179062
       ],
       "Parking": [
        79423,
@@ -9492,10 +9574,6 @@
       "Estructura": [
        0,
        108372098
-      ],
-      "Sin asignar": [
-       0,
-       9771895
       ]
      },
      "E": {
@@ -9507,6 +9585,10 @@
        0,
        -210
       ],
+      "Otros Negocios": [
+       0,
+       -1255
+      ],
       "Parking": [
        4933883,
        -5154
@@ -9514,10 +9596,6 @@
       "Estructura": [
        0,
        98185692
-      ],
-      "Sin asignar": [
-       0,
-       -1255
       ]
      },
      "F": {
@@ -9581,6 +9659,10 @@
        23836,
        8778346
       ],
+      "Otros Negocios": [
+       0,
+       1909215
+      ],
       "Parking": [
        5773,
        4083335
@@ -9588,10 +9670,6 @@
       "Estructura": [
        0,
        145124096
-      ],
-      "Sin asignar": [
-       0,
-       1909215
       ]
      },
      "J": {
@@ -9629,6 +9707,10 @@
        0,
        2362
       ],
+      "Otros Negocios": [
+       0,
+       5523140
+      ],
       "Parking": [
        8871677,
        22688802
@@ -9636,10 +9718,6 @@
       "Estructura": [
        0,
        4600412
-      ],
-      "Sin asignar": [
-       0,
-       5523140
       ]
      },
      "N": {
@@ -9681,7 +9759,7 @@
       ],
       "Otros Negocios": [
        0,
-       7227978
+       17074124
       ],
       "Parking": [
        3393247,
@@ -9690,10 +9768,6 @@
       "Estructura": [
        0,
        93557383
-      ],
-      "Sin asignar": [
-       0,
-       9846146
       ]
      },
      "R": {
@@ -9889,16 +9963,6 @@
    "resultado": {
     "AA&BB": {
      "subunidades": {
-      "(Centros 3xxxx no listados)": {
-       "ingresos": 0.0,
-       "costos_fijos": 0.0,
-       "costos_variables": 84804.49,
-       "personal": 0.0,
-       "costos": 84804.49,
-       "ebitda": -84804.49,
-       "estructura": 0.0,
-       "ebitda_final": -84804.49
-      },
       "360 Express": {
        "ingresos": 37722810.81999999,
        "costos_fijos": 2508199.54,
@@ -9961,13 +10025,13 @@
       },
       "Jarana": {
        "ingresos": 31438561.13,
-       "costos_fijos": 3770274.1500000004,
-       "costos_variables": 10225426.22,
-       "personal": 22594723.33,
-       "costos": 13995700.370000001,
-       "ebitda": -5151862.57,
+       "costos_fijos": 3770274.15,
+       "costos_variables": 10310230.71,
+       "personal": 22594723.330000002,
+       "costos": 14080504.860000001,
+       "ebitda": -5236667.060000006,
        "estructura": 0.0,
-       "ebitda_final": -5151862.57
+       "ebitda_final": -5236667.060000006
       },
       "Remember": {
        "ingresos": 119902321.02,
@@ -10145,15 +10209,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 28255853.9,
-       "costos_fijos": 9891525.239999998,
-       "costos_variables": 1596455.75,
+       "costos_fijos": 34361753.34,
+       "costos_variables": 1786816.79,
        "personal": 0.0,
-       "costos": 11487980.989999998,
-       "ebitda": 16767872.91,
+       "costos": 36148570.13,
+       "ebitda": -7892716.230000004,
        "estructura": 0.0,
-       "ebitda_final": 16767872.91
+       "ebitda_final": -7892716.230000004
       },
       "Shows": {
        "ingresos": 0.0,
@@ -10168,13 +10232,13 @@
      },
      "total": {
       "ingresos": 28255853.9,
-      "costos_fijos": 9891525.239999998,
-      "costos_variables": 1596455.75,
+      "costos_fijos": 34361753.34,
+      "costos_variables": 1786816.79,
       "personal": 0.0,
-      "costos": 11487980.989999998,
-      "ebitda": 16767872.91,
+      "costos": 36148570.13,
+      "ebitda": -7892716.230000004,
       "estructura": 0.0,
-      "ebitda_final": 16767872.91
+      "ebitda_final": -7892716.230000004
      }
     },
     "Parking": {
@@ -10223,10 +10287,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "Centros 3xxxx no listados en la matriz, asignados a AA&BB: ['30114']",
-     "104 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": 0.0,
      "costos_fijos": 0.09999985992908478,
@@ -10249,11 +10310,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 104,
-     "resultado": -24660589.14,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -10262,8 +10321,8 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 1354675152.3700008,
-     "resultado_unidades": 1379335741.51,
-     "diferencia": 9.5367431640625e-07
+     "resultado_unidades": 1354675152.3700001,
+     "diferencia": 7.152557373046875e-07
     },
     "totales_por_ledger": {
      "0L": {
@@ -10278,14 +10337,6 @@
    },
    "detalle": {
     "rubros": [
-     [
-      "AA&BB",
-      "(Centros 3xxxx no listados)",
-      "C",
-      "APROVISIONAMIENTOS",
-      "APROVISIONAMIENTOS",
-      84804
-     ],
      [
       "AA&BB",
       "360 Express",
@@ -10700,7 +10751,7 @@
       "C",
       "APROVISIONAMIENTOS",
       "APROVISIONAMIENTOS",
-      8407026
+      8491831
      ],
      [
       "AA&BB",
@@ -12632,23 +12683,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      1908747
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9826435
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1596456
+      1786817
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1390869
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "REPARACION",
+      "REPARACION",
+      2967097
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      9891525
+      13034329
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5234276
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -12861,7 +12952,7 @@
       ],
       "Otros Negocios": [
        0,
-       1596456
+       11613615
       ],
       "Parking": [
        90455,
@@ -12870,10 +12961,6 @@
       "Estructura": [
        0,
        70855351
-      ],
-      "Sin asignar": [
-       0,
-       10017159
       ]
      },
      "E": {
@@ -12955,6 +13042,10 @@
        24466,
        7101888
       ],
+      "Otros Negocios": [
+       0,
+       1908747
+      ],
       "Parking": [
        5926,
        4082335
@@ -12962,10 +13053,6 @@
       "Estructura": [
        0,
        126955940
-      ],
-      "Sin asignar": [
-       0,
-       1908747
       ]
      },
      "J": {
@@ -13011,6 +13098,10 @@
        0,
        22439
       ],
+      "Otros Negocios": [
+       0,
+       5240270
+      ],
       "Parking": [
        7986664,
        21516160
@@ -13018,10 +13109,6 @@
       "Estructura": [
        0,
        6130820
-      ],
-      "Sin asignar": [
-       0,
-       5240270
       ]
      },
      "N": {
@@ -13067,7 +13154,7 @@
       ],
       "Otros Negocios": [
        0,
-       9891525
+       17385938
       ],
       "Parking": [
        3575226,
@@ -13076,10 +13163,6 @@
       "Estructura": [
        0,
        107695606
-      ],
-      "Sin asignar": [
-       0,
-       7494413
       ]
      },
      "R": {
@@ -13524,15 +13607,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 25430983.03,
-       "costos_fijos": 9168862.64,
-       "costos_variables": 1436850.54,
+       "costos_fijos": 42692722.980000004,
+       "costos_variables": 1633930.79,
        "personal": 0.0,
-       "costos": 10605713.18,
-       "ebitda": 14825269.850000001,
+       "costos": 44326653.77,
+       "ebitda": -18895670.740000002,
        "estructura": 0.0,
-       "ebitda_final": 14825269.850000001
+       "ebitda_final": -18895670.740000002
       },
       "Shows": {
        "ingresos": 0.0,
@@ -13547,13 +13630,13 @@
      },
      "total": {
       "ingresos": 25430983.03,
-      "costos_fijos": 9168862.64,
-      "costos_variables": 1436850.54,
+      "costos_fijos": 42692722.980000004,
+      "costos_variables": 1633930.79,
       "personal": 0.0,
-      "costos": 10605713.18,
-      "ebitda": 14825269.850000001,
+      "costos": 44326653.77,
+      "ebitda": -18895670.740000002,
       "estructura": 0.0,
-      "ebitda_final": 14825269.850000001
+      "ebitda_final": -18895670.740000002
      }
     },
     "Parking": {
@@ -13602,9 +13685,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "117 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": 9.313225746154785e-10,
      "costos_fijos": -0.0700000524520874,
@@ -13627,11 +13708,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 117,
-     "resultado": -33720940.589999996,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -13640,7 +13719,7 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 2219933370.8500013,
-     "resultado_unidades": 2253654311.4399977,
+     "resultado_unidades": 2219933370.8499975,
      "diferencia": 3.814697265625e-06
     },
     "totales_por_ledger": {
@@ -16042,31 +16121,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      2135671
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9826435
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1436851
+      1633931
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      4354706
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "REPARACION",
       "REPARACION",
-      1869752
+      9490086
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      7299111
+      11725018
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5160806
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -16259,7 +16370,7 @@
       ],
       "Otros Negocios": [
        0,
-       1436851
+       11604823
       ],
       "Parking": [
        92012,
@@ -16272,10 +16383,6 @@
       "Casino genérico": [
        0,
        111290
-      ],
-      "Sin asignar": [
-       0,
-       10167973
       ]
      },
      "E": {
@@ -16349,6 +16456,10 @@
        78577,
        7063677
       ],
+      "Otros Negocios": [
+       0,
+       2134524
+      ],
       "Parking": [
        17305,
        4565216
@@ -16360,10 +16471,6 @@
       "Casino genérico": [
        0,
        -1185800
-      ],
-      "Sin asignar": [
-       0,
-       2134524
       ]
      },
      "J": {
@@ -16401,6 +16508,10 @@
        0,
        13166
       ],
+      "Otros Negocios": [
+       0,
+       5164323
+      ],
       "Parking": [
        8396346,
        21209034
@@ -16412,10 +16523,6 @@
       "Casino genérico": [
        0,
        -111290
-      ],
-      "Sin asignar": [
-       0,
-       5164323
       ]
      },
      "N": {
@@ -16461,7 +16568,7 @@
       ],
       "Otros Negocios": [
        0,
-       9168863
+       25421836
       ],
       "Parking": [
        3923911,
@@ -16470,10 +16577,6 @@
       "Estructura": [
        0,
        63827764
-      ],
-      "Sin asignar": [
-       0,
-       16252974
       ]
      },
      "R": {
@@ -16529,6 +16632,10 @@
        0,
        4923270
       ],
+      "Otros Negocios": [
+       0,
+       1147
+      ],
       "Parking": [
        0,
        2453
@@ -16536,10 +16643,6 @@
       "Estructura": [
        0,
        63657115
-      ],
-      "Sin asignar": [
-       0,
-       1147
       ]
      },
      "V": {
@@ -16830,22 +16933,22 @@
        "ingresos": 8682421983.009998,
        "costos_fijos": 878440664.6937162,
        "costos_variables": 3919219594.58,
-       "personal": 2622065687.138851,
+       "personal": 2622065687.1388516,
        "costos": 4797660259.273716,
-       "ebitda": 1262696036.5974312,
+       "ebitda": 1262696036.5974307,
        "estructura": 491913736.0454189,
-       "ebitda_final": 770782300.5520122
+       "ebitda_final": 770782300.5520117
       }
      },
      "total": {
       "ingresos": 10692831712.419998,
       "costos_fijos": 1010158995.37,
       "costos_variables": 4716512222.349999,
-      "personal": 3805472279.89,
+      "personal": 3805472279.8900003,
       "costos": 5726671217.719999,
-      "ebitda": 1160688214.809999,
+      "ebitda": 1160688214.8099985,
       "estructura": 605816073.7700001,
-      "ebitda_final": 554872141.0399988
+      "ebitda_final": 554872141.0399983
      }
     },
     "Casino Online": {
@@ -16928,15 +17031,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 27707445.29,
-       "costos_fijos": 9167377.890000002,
-       "costos_variables": 1500074.23,
+       "costos_fijos": 33434852.24,
+       "costos_variables": 1697904.51,
        "personal": 0.0,
-       "costos": 10667452.120000003,
-       "ebitda": 17039993.169999994,
+       "costos": 35132756.75,
+       "ebitda": -7425311.460000001,
        "estructura": 0.0,
-       "ebitda_final": 17039993.169999994
+       "ebitda_final": -7425311.460000001
       },
       "Shows": {
        "ingresos": 0.0,
@@ -16951,13 +17054,13 @@
      },
      "total": {
       "ingresos": 27707445.29,
-      "costos_fijos": 9167377.890000002,
-      "costos_variables": 1500074.23,
+      "costos_fijos": 33434852.24,
+      "costos_variables": 1697904.51,
       "personal": 0.0,
-      "costos": 10667452.120000003,
-      "ebitda": 17039993.169999994,
+      "costos": 35132756.75,
+      "ebitda": -7425311.460000001,
       "estructura": 0.0,
-      "ebitda_final": 17039993.169999994
+      "ebitda_final": -7425311.460000001
      }
     },
     "Parking": {
@@ -17006,15 +17109,12 @@
     }
    },
    "controles": {
-    "avisos": [
-     "73 asientos en centros sin unidad asignada: ['80000']",
-     "2 asientos con cuenta sin mapear: ['7780000000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": -8.731149137020111e-11,
      "costos_fijos": -0.019999980926513672,
-     "costos_variables": 0.0,
-     "personal": 0.059999942779541016
+     "costos_variables": -4.470348358154297e-08,
+     "personal": 0.06000018119812012
     },
     "casino_generico_reparto": {
      "Slots": 0.8141940567964747,
@@ -17032,23 +17132,19 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 73,
-     "resultado": -24465304.63,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
-     "lineas": 2,
+     "lineas": 0,
      "importe_sap": 0.0,
-     "cuentas": [
-      "7780000000"
-     ]
+     "cuentas": []
     },
     "conciliacion": {
-     "resultado_bajada_mapeada": 2004928126.3800006,
-     "resultado_unidades": 2029393431.01,
-     "diferencia": 7.152557373046875e-07
+     "resultado_bajada_mapeada": 2004928126.380003,
+     "resultado_unidades": 2004928126.3799996,
+     "diferencia": 3.337860107421875e-06
     },
     "totales_por_ledger": {
      "0L": {
@@ -19433,15 +19529,39 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
       "C",
-      "IMPUESTOS VARIABLES",
-      "IAE",
-      1500074
+      "CORREOS",
+      "CORREOS",
+      2188768
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      9826435
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS VARIABLES",
+      "IAE",
+      1697905
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1165267
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "REPARACION",
       "ARRENDAMIENTOS Y CANONES",
@@ -19449,15 +19569,31 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
       "C",
-      "SUMINISTROS",
-      "SUMINISTROS",
-      9123665
+      "REPARACION",
+      "REPARACION",
+      1573199
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "SUMINISTROS",
+      "SUMINISTROS",
+      13476664
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5160806
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -19662,7 +19798,7 @@
       ],
       "Otros Negocios": [
        0,
-       1500074
+       11649411
       ],
       "Parking": [
        116931,
@@ -19671,10 +19807,6 @@
       "Estructura": [
        0,
        84514456
-      ],
-      "Sin asignar": [
-       0,
-       10149337
       ]
      },
      "E": {
@@ -19756,6 +19888,10 @@
        35262,
        7152201
       ],
+      "Otros Negocios": [
+       0,
+       2204404
+      ],
       "Parking": [
        7688,
        4714671
@@ -19763,10 +19899,6 @@
       "Estructura": [
        0,
        143327293
-      ],
-      "Sin asignar": [
-       0,
-       2204404
       ]
      },
      "J": {
@@ -19800,6 +19932,10 @@
        0,
        862291
       ],
+      "Otros Negocios": [
+       0,
+       5160806
+      ],
       "Parking": [
        9267133,
        21201513
@@ -19807,10 +19943,6 @@
       "Estructura": [
        0,
        4908402
-      ],
-      "Sin asignar": [
-       0,
-       5160806
       ]
      },
      "N": {
@@ -19852,7 +19984,7 @@
       ],
       "Otros Negocios": [
        0,
-       9167378
+       16118135
       ],
       "Parking": [
        3792627,
@@ -19861,10 +19993,6 @@
       "Estructura": [
        0,
        132077636
-      ],
-      "Sin asignar": [
-       0,
-       6950757
       ]
      },
      "R": {
@@ -20302,15 +20430,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 25008938.020000003,
-       "costos_fijos": 14904395.06,
-       "costos_variables": 1413005.0,
+       "costos_fijos": 45539759.97,
+       "costos_variables": 1589537.19,
        "personal": 0.0,
-       "costos": 16317400.06,
-       "ebitda": 8691537.960000003,
+       "costos": 47129297.16,
+       "ebitda": -22120359.139999993,
        "estructura": 0.0,
-       "ebitda_final": 8691537.960000003
+       "ebitda_final": -22120359.139999993
       },
       "Shows": {
        "ingresos": 0.0,
@@ -20325,13 +20453,13 @@
      },
      "total": {
       "ingresos": 25008938.020000003,
-      "costos_fijos": 14904395.06,
-      "costos_variables": 1413005.0,
+      "costos_fijos": 45539759.97,
+      "costos_variables": 1589537.19,
       "personal": 0.0,
-      "costos": 16317400.06,
-      "ebitda": 8691537.960000003,
+      "costos": 47129297.16,
+      "ebitda": -22120359.139999993,
       "estructura": 0.0,
-      "ebitda_final": 8691537.960000003
+      "ebitda_final": -22120359.139999993
      }
     },
     "Parking": {
@@ -20380,9 +20508,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "92 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": 1.3096723705530167e-10,
      "costos_fijos": -0.030000001192092896,
@@ -20405,11 +20531,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 92,
-     "resultado": -30811897.1,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -20418,8 +20542,8 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 1835418290.0499997,
-     "resultado_unidades": 1866230187.1500025,
-     "diferencia": -2.86102294921875e-06
+     "resultado_unidades": 1835418290.0500023,
+     "diferencia": -2.6226043701171875e-06
     },
     "totales_por_ledger": {
      "0L": {
@@ -22780,23 +22904,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      2050300
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      11045980
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1413005
+      1589537
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1077198
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "REPARACION",
+      "REPARACION",
+      6743320
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      14904395
+      19283121
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5339841
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -23005,7 +23169,7 @@
       ],
       "Otros Negocios": [
        0,
-       1413005
+       12653316
       ],
       "Parking": [
        117093,
@@ -23014,10 +23178,6 @@
       "Estructura": [
        0,
        101684221
-      ],
-      "Sin asignar": [
-       0,
-       11240311
       ]
      },
      "E": {
@@ -23095,6 +23255,10 @@
        29597,
        7639590
       ],
+      "Otros Negocios": [
+       0,
+       2071296
+      ],
       "Parking": [
        6326,
        4429987
@@ -23102,10 +23266,6 @@
       "Estructura": [
        0,
        181427999
-      ],
-      "Sin asignar": [
-       0,
-       2071296
       ]
      },
      "J": {
@@ -23135,6 +23295,10 @@
        0,
        892205
       ],
+      "Otros Negocios": [
+       0,
+       5339841
+      ],
       "Parking": [
        7687642,
        21937019
@@ -23142,10 +23306,6 @@
       "Estructura": [
        0,
        4591005
-      ],
-      "Sin asignar": [
-       0,
-       5339841
       ]
      },
      "N": {
@@ -23187,7 +23347,7 @@
       ],
       "Otros Negocios": [
        0,
-       14904395
+       27064844
       ],
       "Parking": [
        2920425,
@@ -23196,10 +23356,6 @@
       "Estructura": [
        0,
        74062747
-      ],
-      "Sin asignar": [
-       0,
-       12160449
       ]
      },
      "R": {
@@ -23642,15 +23798,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 28182691.4,
-       "costos_fijos": 17115212.71,
-       "costos_variables": 1592322.06,
+       "costos_fijos": 44429894.18,
+       "costos_variables": 1777089.8800000001,
        "personal": 0.0,
-       "costos": 18707534.77,
-       "ebitda": 9475156.629999999,
+       "costos": 46206984.06,
+       "ebitda": -18024292.660000004,
        "estructura": 0.0,
-       "ebitda_final": 9475156.629999999
+       "ebitda_final": -18024292.660000004
       },
       "Shows": {
        "ingresos": 0.0,
@@ -23665,13 +23821,13 @@
      },
      "total": {
       "ingresos": 28182691.4,
-      "costos_fijos": 17115212.71,
-      "costos_variables": 1592322.0599999998,
+      "costos_fijos": 44429894.18,
+      "costos_variables": 1777089.88,
       "personal": 0.0,
-      "costos": 18707534.77,
-      "ebitda": 9475156.629999999,
+      "costos": 46206984.06,
+      "ebitda": -18024292.660000004,
       "estructura": 0.0,
-      "ebitda_final": 9475156.629999999
+      "ebitda_final": -18024292.660000004
      }
     },
     "Parking": {
@@ -23720,15 +23876,12 @@
     }
    },
    "controles": {
-    "avisos": [
-     "89 asientos en centros sin unidad asignada: ['80000']",
-     "2 asientos con cuenta sin mapear: ['7780000000']"
-    ],
+    "avisos": [],
     "casino_generico": {
-     "ingresos": 5.820766091346741e-11,
-     "costos_fijos": -0.08000004291534424,
-     "costos_variables": -0.020000018179416656,
-     "personal": -0.0700000524520874
+     "ingresos": 1.2223608791828156e-09,
+     "costos_fijos": -0.08000001311302185,
+     "costos_variables": -0.019999995827674866,
+     "personal": -0.06999999284744263
     },
     "casino_generico_reparto": {
      "Slots": 0.839568173472735,
@@ -23746,22 +23899,18 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 89,
-     "resultado": -27499449.29,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
-     "lineas": 2,
+     "lineas": 0,
      "importe_sap": 0.0,
-     "cuentas": [
-      "7780000000"
-     ]
+     "cuentas": []
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 2424858258.9400053,
-     "resultado_unidades": 2452357708.2300005,
+     "resultado_unidades": 2424858258.9400005,
      "diferencia": 4.76837158203125e-06
     },
     "totales_por_ledger": {
@@ -26115,31 +26264,63 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      2450098
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      11045980
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1592322
+      1777090
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1499832
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "REPARACION",
       "REPARACION",
-      614075
+      3390720
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      16501138
+      20620284
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5422980
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -26368,7 +26549,7 @@
       ],
       "Otros Negocios": [
        0,
-       1592322
+       12913002
       ],
       "Parking": [
        117969,
@@ -26377,10 +26558,6 @@
       "Estructura": [
        0,
        96230820
-      ],
-      "Sin asignar": [
-       0,
-       11320680
       ]
      },
      "E": {
@@ -26436,13 +26613,13 @@
        9000640,
        328998
       ],
+      "Otros Negocios": [
+       0,
+       204
+      ],
       "Parking": [
        2739214,
        437
-      ],
-      "Sin asignar": [
-       0,
-       204
       ]
      },
      "I": {
@@ -26462,6 +26639,10 @@
        20070,
        7621156
       ],
+      "Otros Negocios": [
+       0,
+       2450098
+      ],
       "Parking": [
        5799,
        18029149
@@ -26469,10 +26650,6 @@
       "Estructura": [
        0,
        156492291
-      ],
-      "Sin asignar": [
-       0,
-       2450098
       ]
      },
      "J": {
@@ -26514,6 +26691,10 @@
        0,
        13111
       ],
+      "Otros Negocios": [
+       0,
+       5426483
+      ],
       "Parking": [
        9342008,
        22286060
@@ -26521,10 +26702,6 @@
       "Estructura": [
        0,
        8115650
-      ],
-      "Sin asignar": [
-       0,
-       5426483
       ]
      },
      "N": {
@@ -26566,7 +26743,7 @@
       ],
       "Otros Negocios": [
        0,
-       17115213
+       25417197
       ],
       "Parking": [
        3889821,
@@ -26575,10 +26752,6 @@
       "Estructura": [
        0,
        65022393
-      ],
-      "Sin asignar": [
-       0,
-       8301985
       ]
      },
      "R": {
@@ -27022,15 +27195,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 29361834.19,
-       "costos_fijos": 13903039.920000002,
-       "costos_variables": 1593751.2699999998,
+       "costos_fijos": 50748022.17,
+       "costos_variables": 1768636.3499999999,
        "personal": 0.0,
-       "costos": 15496791.190000001,
-       "ebitda": 13865043.0,
+       "costos": 52516658.52,
+       "ebitda": -23154824.330000002,
        "estructura": 0.0,
-       "ebitda_final": 13865043.0
+       "ebitda_final": -23154824.330000002
       },
       "Shows": {
        "ingresos": 0.0,
@@ -27045,13 +27218,13 @@
      },
      "total": {
       "ingresos": 29361834.19,
-      "costos_fijos": 13903039.920000002,
-      "costos_variables": 1593751.2699999998,
+      "costos_fijos": 50748022.17,
+      "costos_variables": 1768636.3499999999,
       "personal": 0.0,
-      "costos": 15496791.190000001,
-      "ebitda": 13865043.0,
+      "costos": 52516658.52,
+      "ebitda": -23154824.330000002,
       "estructura": 0.0,
-      "ebitda_final": 13865043.0
+      "ebitda_final": -23154824.330000002
      }
     },
     "Parking": {
@@ -27100,9 +27273,7 @@
     }
    },
    "controles": {
-    "avisos": [
-     "115 asientos en centros sin unidad asignada: ['80000']"
-    ],
+    "avisos": [],
     "casino_generico": {
      "ingresos": 4.656612873077393e-10,
      "costos_fijos": -0.06999993324279785,
@@ -27125,11 +27296,9 @@
      "resultado": 0.0
     },
     "sin_asignar": {
-     "lineas": 115,
-     "resultado": -37019867.33000002,
-     "ceco": [
-      "80000"
-     ]
+     "lineas": 0,
+     "resultado": 0.0,
+     "ceco": []
     },
     "cuentas_sin_mapeo": {
      "lineas": 0,
@@ -27138,7 +27307,7 @@
     },
     "conciliacion": {
      "resultado_bajada_mapeada": 2264460315.909999,
-     "resultado_unidades": 2301480183.239999,
+     "resultado_unidades": 2264460315.909999,
      "diferencia": 0.0
     },
     "totales_por_ledger": {
@@ -29564,31 +29733,71 @@
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "CORREOS",
+      "CORREOS",
+      1766828
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "IMPUESTOS FIJOS",
+      "OTROS IMPUESTOS",
+      11045980
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "IMPUESTOS VARIABLES",
       "IAE",
-      1593751
+      1768636
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "LIMPIEZA",
+      "LIMPIEZA",
+      1420466
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
+      "C",
+      "PUBLICIDAD",
+      "PUBLICIDAD",
+      500000
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "C",
       "REPARACION",
       "REPARACION",
-      7779934
+      20177987
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
       "C",
       "SUMINISTROS",
       "SUMINISTROS",
-      6123106
+      10774040
      ],
      [
       "Otros Negocios",
-      "Alquiler de Locales",
+      "Alquileres Locales",
+      "C",
+      "VIGILANCIA",
+      "VIGILANCIA",
+      5062722
+     ],
+     [
+      "Otros Negocios",
+      "Alquileres Locales",
       "I",
       "OTROS INGRESOS",
       "Ingresos por Alquileres",
@@ -29809,7 +30018,7 @@
       ],
       "Otros Negocios": [
        0,
-       1593751
+       12910283
       ],
       "Parking": [
        97136,
@@ -29818,10 +30027,6 @@
       "Estructura": [
        0,
        99041650
-      ],
-      "Sin asignar": [
-       0,
-       11316532
       ]
      },
      "E": {
@@ -29899,6 +30104,10 @@
        27539,
        9144391
       ],
+      "Otros Negocios": [
+       0,
+       1779086
+      ],
       "Parking": [
        5721,
        10294022
@@ -29906,10 +30115,6 @@
       "Estructura": [
        0,
        174583198
-      ],
-      "Sin asignar": [
-       0,
-       1779086
       ]
      },
      "J": {
@@ -29925,6 +30130,10 @@
        0,
        1026000
       ],
+      "Otros Negocios": [
+       0,
+       500000
+      ],
       "Parking": [
        0,
        785124
@@ -29932,10 +30141,6 @@
       "Estructura": [
        0,
        27812136
-      ],
-      "Sin asignar": [
-       0,
-       500000
       ]
      },
      "L": {
@@ -29955,6 +30160,10 @@
        0,
        26222
       ],
+      "Otros Negocios": [
+       0,
+       5069727
+      ],
       "Parking": [
        9926467,
        21947695
@@ -29962,10 +30171,6 @@
       "Estructura": [
        0,
        3708812
-      ],
-      "Sin asignar": [
-       0,
-       5069727
       ]
      },
      "N": {
@@ -30007,7 +30212,7 @@
       ],
       "Otros Negocios": [
        0,
-       13903040
+       32254451
       ],
       "Parking": [
        4070710,
@@ -30016,10 +30221,6 @@
       "Estructura": [
        0,
        72724702
-      ],
-      "Sin asignar": [
-       0,
-       18351411
       ]
      },
      "R": {
@@ -30039,6 +30240,10 @@
        257558,
        11648
       ],
+      "Otros Negocios": [
+       0,
+       3112
+      ],
       "Parking": [
        15299,
        6655
@@ -30046,10 +30251,6 @@
       "Estructura": [
        0,
        45189987
-      ],
-      "Sin asignar": [
-       0,
-       3112
       ]
      },
      "T": {
@@ -30223,16 +30424,6 @@
    "unidades": {
     "AA&BB": {
      "subunidades": {
-      "(Centros 3xxxx no listados)": {
-       "ingresos": 0.0,
-       "costos_fijos": 0.0,
-       "costos_variables": 84804.49,
-       "personal": 0.0,
-       "costos": 84804.49,
-       "ebitda": -84804.49,
-       "estructura": 0.0,
-       "ebitda_final": -84804.49
-      },
       "360 Express": {
        "ingresos": 351127035.78,
        "costos_fijos": 21918881.490000002,
@@ -30296,12 +30487,12 @@
       "Jarana": {
        "ingresos": 418354799.61,
        "costos_fijos": 30690416.490000002,
-       "costos_variables": 125979958.58999999,
+       "costos_variables": 126064763.08,
        "personal": 207317413.87,
-       "costos": 156670375.08,
-       "ebitda": 54367010.66000001,
+       "costos": 156755179.57000002,
+       "ebitda": 54282206.17,
        "estructura": 0.0,
-       "ebitda_final": 54367010.66000001
+       "ebitda_final": 54282206.17
       },
       "Remember": {
        "ingresos": 1141198846.2,
@@ -30385,7 +30576,7 @@
        "costos": 44148595586.1372,
        "ebitda": 11948736997.56868,
        "estructura": 4089378456.7026525,
-       "ebitda_final": 7859358540.866026
+       "ebitda_final": 7859358540.866024
       }
      },
      "total": {
@@ -30396,7 +30587,7 @@
       "costos": 52722443895.619995,
       "ebitda": 11476595290.699997,
       "estructura": 5072954448.999999,
-      "ebitda_final": 6403640841.699999
+      "ebitda_final": 6403640841.699998
      }
     },
     "Casino Online": {
@@ -30479,15 +30670,15 @@
     },
     "Otros Negocios": {
      "subunidades": {
-      "Alquiler de Locales": {
+      "Alquileres Locales": {
        "ingresos": 243133985.0,
-       "costos_fijos": 85220004.19000001,
-       "costos_variables": 13606481.48,
+       "costos_fijos": 334603475.88,
+       "costos_variables": 15268539.89,
        "personal": 0.0,
-       "costos": 98826485.67,
-       "ebitda": 144307499.32999998,
+       "costos": 349872015.77,
+       "ebitda": -106738030.77,
        "estructura": 0.0,
-       "ebitda_final": 144307499.32999998
+       "ebitda_final": -106738030.77
       },
       "Shows": {
        "ingresos": 0.0,
@@ -30502,13 +30693,13 @@
      },
      "total": {
       "ingresos": 243133985.0,
-      "costos_fijos": 85220004.19000001,
-      "costos_variables": 13606481.48,
+      "costos_fijos": 334603475.88,
+      "costos_variables": 15268539.889999999,
       "personal": 0.0,
-      "costos": 98826485.67,
-      "ebitda": 144307499.32999998,
+      "costos": 349872015.77,
+      "ebitda": -106738030.77,
       "estructura": 0.0,
-      "ebitda_final": 144307499.32999998
+      "ebitda_final": -106738030.77
      }
     },
     "Parking": {
